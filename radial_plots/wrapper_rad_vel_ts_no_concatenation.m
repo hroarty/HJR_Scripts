@@ -27,8 +27,8 @@ conf.Radials.BaseDir='/Volumes/codaradm/data/radials/';
 %                      'RDLi','RDLm','RDLi','RDLm','RDLi','RDLm'};
 % conf.Radials.Sites= {'LOVE','LOVE'};
 % conf.Radials.Types= {'RDLi','RDLm'};
-conf.Radials.Sites= {'MRCH','MRCH',};
-conf.Radials.Types= {'RDLi','RDLm'};
+conf.Radials.Sites= {'NANT','NANT','ASSA','ASSA','LISL','LISL',};
+conf.Radials.Types= {'RDLi','RDLm','RDLi','RDLm','RDLi','RDLm'};
 conf.Radials.Range={18,18};                        
 conf.Radials.Bear={125,125};
 
@@ -38,7 +38,7 @@ conf.Radials.HourFlag=false;
 conf.Radials.Raw=false;
 %conf.Radials.MaskFile='/home/codaradm/data/mask_files/BPU_2km_extendedMask.txt';
 %conf.Radials.MaskFile='/Volumes/codaradm/data/mask_files/BPU_2km_extendedMask.txt';
-conf.Radials.MaskFile='/Users/hroarty/data/mask_files/MARACOOS_6kmMask.txt';
+conf.Radials.MaskFile='/Users/roarty/Documents/GitHub/HJR_Scripts/data/mask_files/MARACOOS_6kmMask.txt';
 conf.Radials.MaxRadSpeed=300;
 
 %% declare the analysis time
@@ -51,8 +51,8 @@ dtime=datenum(year,1,1,0,0,2):1/24:datenum(year+1,1,1,00,0,2);
 %% addpath for function colormap17.m that is a colormap that i made.  The colormap
 %% is contained in the variable M
 % addpath /Volumes/hroarty/Matlab/
-colormap7_light_dark
-range_color=M;
+% colormap7_light_dark
+% range_color=M;
 
 cleanflag=0;
 maskflag=0;
