@@ -1,0 +1,975 @@
+ncdisp(url)
+Source:
+           http://tds.marine.rutgers.edu:8080/thredds/dodsC/roms/espresso/2013_da/avg_Best/ESPRESSO_Real-Time_v2_Averages_Best_Available_best.ncd
+Format:
+           64bit
+Global Attributes:
+           file             = 'espresso_avg_3408_0002.nc'
+           format           = 'netCDF-4/HDF5 file'
+           Conventions      = 'CF-1.4, _Coordinates'
+           type             = 'ROMS/TOMS nonlinear model averages file'
+           title            = 'ROMS ESPRESSO Real-Time Operational IS4DVAR Forecast System Version 2 (NEW) 2013-present FMRC Averages (Best)'
+           rst_file         = 'espresso_rst_3408.nc'
+           his_base         = 'espresso_his_3408'
+           avg_base         = 'espresso_avg_3408'
+           flt_file         = 'espresso_flt_3408.nc'
+           grd_file         = '/home/om/roms/espresso/Data/espresso_grid_c05.nc'
+           ini_file         = '/home/julia/ROMS/espresso/RealTime/Storage/run04/espresso_ini_3408.nc'
+           frc_file_01      = '/home/om/roms/espresso/Data/espresso_tide_c05_20060101.nc'
+           frc_file_02      = '../Data/espresso_river.nc'
+           frc_file_03      = '../Data/rain_ncepnam_3hourly_MAB_and_GoM.nc'
+           frc_file_04      = '../Data/swrad_ncepnam_3hourly_MAB_and_GoM.nc'
+           frc_file_05      = '../Data/Tair_ncepnam_3hourly_MAB_and_GoM.nc'
+           frc_file_06      = '../Data/Pair_ncepnam_3hourly_MAB_and_GoM.nc'
+           frc_file_07      = '../Data/Qair_ncepnam_3hourly_MAB_and_GoM.nc'
+           frc_file_08      = '../Data/lwrad_down_ncepnam_3hourly_MAB_and_GoM.nc'
+           frc_file_09      = '../Data/Uwind_ncepnam_3hourly_MAB_and_GoM.nc'
+           frc_file_10      = '../Data/Vwind_ncepnam_3hourly_MAB_and_GoM.nc'
+           bry_file         = '../Data/espresso_bdry_new.nc'
+           clm_file         = '../Data/espresso_clm_new.nc'
+           script_file      = 'nl_ocean_espresso.in'
+           fpos_file        = '/home/om/roms/espresso/Data/espresso_floats_glider.in'
+           svn_url          = 'https://www.myroms.org/svn/src/trunk'
+           svn_rev          = 'exported'
+           code_dir         = '/home/julia/ROMS/espresso/svn1409'
+           header_dir       = '/home/julia/ROMS/espresso/RealTime/Compile/fwd'
+           header_file      = 'espresso.h'
+           os               = 'Linux'
+           cpu              = 'x86_64'
+           compiler_system  = 'pgi'
+           compiler_command = '/opt/pgisoft/openmpi/bin/mpif90'
+           compiler_flags   = ' -O3 -Mfree'
+           tiling           = '004x002'
+           history          = 'ROMS/TOMS, Version 3.5, Tuesday - May 5, 2015 -  6:22:15 AM ;
+                              FMRC Best Dataset'
+           ana_file         = 'ROMS/Functionals/ana_btflux.h, /home/julia/ROMS/espresso/RealTime/Compile/fwd/ana_nudgcoef.h'
+           CPP_options      = 'MyCPP, ADD_FSOBC, ADD_M2OBC, ANA_BSFLUX, ANA_BTFLUX, ASSUMED_SHAPE, AVERAGES, BULK_FLUXES, CURVGRID, DEFLATE, DJ_GRADPS, DOUBLE_PRECISION, EAST_FSCHAPMAN, EAST_M2FLATHER, EAST_M3NUDGING, EAST_M3RADIATION, EAST_TNUDGING, EAST_TRADIATION, EMINUSP, FLOATS, FORWARD_WRITE, GLS_MIXING, HDF5, KANTHA_CLAYSON, LONGWAVE_OUT, M3CLIMATOLOGY, M3CLM_NUDGING, MASKING, MIX_GEO_TS, MIX_S_UV, MPI, NONLINEAR, NONLIN_EOS, NORTHERN_WALL, N2S2_HORAVG, POWER_LAW, PROFILE, K_GSCHEME, !RST_SINGLE, SALINITY, SOLAR_SOURCE, SOLVE3D, SOUTH_FSCHAPMAN, SOUTH_M2FLATHER, SOUTH_M3NUDGING, SOUTH_M3RADIATION, SOUTH_TNUDGING, SOUTH_TRADIATION, SPLINES, SSH_TIDES, TCLIMATOLOGY, TCLM_NUDGING, TS_A4HADVECTION, TS_A4VADVECTION, TS_DIF2, TS_PSOURCE, UV_ADV, UV_COR, UV_U3HADVECTION, UV_C4VADVECTION, UV_QDRAG, UV_PSOURCE, UV_TIDES, UV_VIS2, VAR_RHO_2D, WEST_FSCHAPMAN, WEST_M2FLATHER, WEST_M3NUDGING, WEST_M3RADIATION, WEST_TNUDGING, WEST_TRADIATION'
+           _CoordSysBuilder = 'ucar.nc2.dataset.conv.CF1Convention'
+           cdm_data_type    = 'GRID'
+           featureType      = 'GRID'
+           location         = 'Proto fmrc:espresso_2013_da_avg_best'
+           summary          = 'Operational nowcast/forecast system version 2 for MARACOOS project (http://maracoos.org). Grid configuration and assimilation system the same as for the ~6 km resolution ROMS Espresso Experiment. These simulations are forced by NCEP NAM operational atmospheric forcing, boundary conditions are from HYCOM-NCODA 1/12 deg model; tides are from ADCIRC model. Assimilated data: SST (AVHRR and blended MW+IR), HF Radar, along track SSH from Jason2.'
+Dimensions:
+           ocean_time = 1     (UNLIMITED)
+           boundary   = 4
+           eta_psi    = 81
+           eta_rho    = 82
+           eta_u      = 82
+           eta_v      = 81
+           s_rho      = 36
+           s_w        = 37
+           time       = 720
+           tracer     = 2
+           xi_psi     = 129
+           xi_rho     = 130
+           xi_u       = 129
+           xi_v       = 130
+Variables:
+    ntimes        
+           Size:       1x1
+           Dimensions: 
+           Datatype:   int32
+           Attributes:
+                       long_name = 'number of long time-steps'
+    ndtfast       
+           Size:       1x1
+           Dimensions: 
+           Datatype:   int32
+           Attributes:
+                       long_name = 'number of short time-steps'
+    dt            
+           Size:       1x1
+           Dimensions: 
+           Datatype:   double
+           Attributes:
+                       units     = 'second'
+                       long_name = 'size of long time-steps'
+    dtfast        
+           Size:       1x1
+           Dimensions: 
+           Datatype:   double
+           Attributes:
+                       units     = 'second'
+                       long_name = 'size of short time-steps'
+    dstart        
+           Size:       1x1
+           Dimensions: 
+           Datatype:   double
+           Attributes:
+                       units     = 'days since 2006-01-01 00:00:00'
+                       long_name = 'time stamp assigned to model initilization'
+    shuffle       
+           Size:       1x1
+           Dimensions: 
+           Datatype:   int32
+           Attributes:
+                       long_name = 'NetCDF-4/HDF5 file format shuffle filer flag'
+    deflate       
+           Size:       1x1
+           Dimensions: 
+           Datatype:   int32
+           Attributes:
+                       long_name = 'NetCDF-4/HDF5 file format deflate filer flag'
+    deflate_level 
+           Size:       1x1
+           Dimensions: 
+           Datatype:   int32
+           Attributes:
+                       long_name = 'NetCDF-4/HDF5 file format deflate level parameter'
+    nHIS          
+           Size:       1x1
+           Dimensions: 
+           Datatype:   int32
+           Attributes:
+                       long_name = 'number of time-steps between history records'
+    ndefHIS       
+           Size:       1x1
+           Dimensions: 
+           Datatype:   int32
+           Attributes:
+                       long_name = 'number of time-steps between the creation of history files'
+    nRST          
+           Size:       1x1
+           Dimensions: 
+           Datatype:   int32
+           Attributes:
+                       long_name = 'number of time-steps between restart records'
+    ntsAVG        
+           Size:       1x1
+           Dimensions: 
+           Datatype:   int32
+           Attributes:
+                       long_name = 'starting time-step for accumulation of time-averaged fields'
+    nAVG          
+           Size:       1x1
+           Dimensions: 
+           Datatype:   int32
+           Attributes:
+                       long_name = 'number of time-steps between time-averaged records'
+    ndefAVG       
+           Size:       1x1
+           Dimensions: 
+           Datatype:   int32
+           Attributes:
+                       long_name = 'number of time-steps between the creation of average files'
+    Falpha        
+           Size:       1x1
+           Dimensions: 
+           Datatype:   double
+           Attributes:
+                       long_name = 'Power-law shape barotropic filter parameter'
+    Fbeta         
+           Size:       1x1
+           Dimensions: 
+           Datatype:   double
+           Attributes:
+                       long_name = 'Power-law shape barotropic filter parameter'
+    Fgamma        
+           Size:       1x1
+           Dimensions: 
+           Datatype:   double
+           Attributes:
+                       long_name = 'Power-law shape barotropic filter parameter'
+    nl_tnu2       
+           Size:       2x1
+           Dimensions: tracer
+           Datatype:   double
+           Attributes:
+                       units     = 'meter2 second-1'
+                       long_name = 'nonlinear model Laplacian mixing coefficient for tracers'
+    nl_visc2      
+           Size:       1x1
+           Dimensions: 
+           Datatype:   double
+           Attributes:
+                       units     = 'meter2 second-1'
+                       long_name = 'nonlinear model Laplacian mixing coefficient for momentum'
+    Akt_bak       
+           Size:       2x1
+           Dimensions: tracer
+           Datatype:   double
+           Attributes:
+                       units     = 'meter2 second-1'
+                       long_name = 'background vertical mixing coefficient for tracers'
+    Akv_bak       
+           Size:       1x1
+           Dimensions: 
+           Datatype:   double
+           Attributes:
+                       units     = 'meter2 second-1'
+                       long_name = 'background vertical mixing coefficient for momentum'
+    Akk_bak       
+           Size:       1x1
+           Dimensions: 
+           Datatype:   double
+           Attributes:
+                       units     = 'meter2 second-1'
+                       long_name = 'background vertical mixing coefficient for turbulent energy'
+    Akp_bak       
+           Size:       1x1
+           Dimensions: 
+           Datatype:   double
+           Attributes:
+                       units     = 'meter2 second-1'
+                       long_name = 'background vertical mixing coefficient for length scale'
+    rdrg          
+           Size:       1x1
+           Dimensions: 
+           Datatype:   double
+           Attributes:
+                       units     = 'meter second-1'
+                       long_name = 'linear drag coefficient'
+    rdrg2         
+           Size:       1x1
+           Dimensions: 
+           Datatype:   double
+           Attributes:
+                       long_name = 'quadratic drag coefficient'
+    Zob           
+           Size:       1x1
+           Dimensions: 
+           Datatype:   double
+           Attributes:
+                       units     = 'meter'
+                       long_name = 'bottom roughness'
+    Zos           
+           Size:       1x1
+           Dimensions: 
+           Datatype:   double
+           Attributes:
+                       units     = 'meter'
+                       long_name = 'surface roughness'
+    gls_p         
+           Size:       1x1
+           Dimensions: 
+           Datatype:   double
+           Attributes:
+                       long_name = 'stability exponent'
+    gls_m         
+           Size:       1x1
+           Dimensions: 
+           Datatype:   double
+           Attributes:
+                       long_name = 'turbulent kinetic energy exponent'
+    gls_n         
+           Size:       1x1
+           Dimensions: 
+           Datatype:   double
+           Attributes:
+                       long_name = 'turbulent length scale exponent'
+    gls_cmu0      
+           Size:       1x1
+           Dimensions: 
+           Datatype:   double
+           Attributes:
+                       long_name = 'stability coefficient'
+    gls_c1        
+           Size:       1x1
+           Dimensions: 
+           Datatype:   double
+           Attributes:
+                       long_name = 'shear production coefficient'
+    gls_c2        
+           Size:       1x1
+           Dimensions: 
+           Datatype:   double
+           Attributes:
+                       long_name = 'dissipation coefficient'
+    gls_c3m       
+           Size:       1x1
+           Dimensions: 
+           Datatype:   double
+           Attributes:
+                       long_name = 'buoyancy production coefficient (minus)'
+    gls_c3p       
+           Size:       1x1
+           Dimensions: 
+           Datatype:   double
+           Attributes:
+                       long_name = 'buoyancy production coefficient (plus)'
+    gls_sigk      
+           Size:       1x1
+           Dimensions: 
+           Datatype:   double
+           Attributes:
+                       long_name = 'constant Schmidt number for TKE'
+    gls_sigp      
+           Size:       1x1
+           Dimensions: 
+           Datatype:   double
+           Attributes:
+                       long_name = 'constant Schmidt number for PSI'
+    gls_Kmin      
+           Size:       1x1
+           Dimensions: 
+           Datatype:   double
+           Attributes:
+                       long_name = 'minimum value of specific turbulent kinetic energy'
+    gls_Pmin      
+           Size:       1x1
+           Dimensions: 
+           Datatype:   double
+           Attributes:
+                       long_name = 'minimum Value of dissipation'
+    Charnok_alpha 
+           Size:       1x1
+           Dimensions: 
+           Datatype:   double
+           Attributes:
+                       long_name = 'Charnok factor for surface roughness'
+    Zos_hsig_alpha
+           Size:       1x1
+           Dimensions: 
+           Datatype:   double
+           Attributes:
+                       long_name = 'wave amplitude factor for surface roughness'
+    sz_alpha      
+           Size:       1x1
+           Dimensions: 
+           Datatype:   double
+           Attributes:
+                       long_name = 'surface flux from wave dissipation'
+    CrgBan_cw     
+           Size:       1x1
+           Dimensions: 
+           Datatype:   double
+           Attributes:
+                       long_name = 'surface flux due to Craig and Banner wave breaking'
+    Znudg         
+           Size:       1x1
+           Dimensions: 
+           Datatype:   double
+           Attributes:
+                       units     = 'day-1'
+                       long_name = 'free-surface nudging/relaxation inverse time scale'
+    M2nudg        
+           Size:       1x1
+           Dimensions: 
+           Datatype:   double
+           Attributes:
+                       units     = 'day-1'
+                       long_name = '2D momentum nudging/relaxation inverse time scale'
+    M3nudg        
+           Size:       1x1
+           Dimensions: 
+           Datatype:   double
+           Attributes:
+                       units     = 'day-1'
+                       long_name = '3D momentum nudging/relaxation inverse time scale'
+    Tnudg         
+           Size:       2x1
+           Dimensions: tracer
+           Datatype:   double
+           Attributes:
+                       units     = 'day-1'
+                       long_name = 'Tracers nudging/relaxation inverse time scale'
+    FSobc_in      
+           Size:       4x1
+           Dimensions: boundary
+           Datatype:   double
+           Attributes:
+                       units     = 'second-1'
+                       long_name = 'free-surface inflow, nudging inverse time scale'
+    FSobc_out     
+           Size:       4x1
+           Dimensions: boundary
+           Datatype:   double
+           Attributes:
+                       units     = 'second-1'
+                       long_name = 'free-surface outflow, nudging inverse time scale'
+    M2obc_in      
+           Size:       4x1
+           Dimensions: boundary
+           Datatype:   double
+           Attributes:
+                       units     = 'second-1'
+                       long_name = '2D momentum inflow, nudging inverse time scale'
+    M2obc_out     
+           Size:       4x1
+           Dimensions: boundary
+           Datatype:   double
+           Attributes:
+                       units     = 'second-1'
+                       long_name = '2D momentum outflow, nudging inverse time scale'
+    Tobc_in       
+           Size:       2x4
+           Dimensions: tracer,boundary
+           Datatype:   double
+           Attributes:
+                       units      = 'second-1'
+                       long_name  = 'tracers inflow, nudging inverse time scale'
+                       _ChunkSize = [4.00e+00 2.00e+00]
+    Tobc_out      
+           Size:       2x4
+           Dimensions: tracer,boundary
+           Datatype:   double
+           Attributes:
+                       units      = 'second-1'
+                       long_name  = 'tracers outflow, nudging inverse time scale'
+                       _ChunkSize = [4.00e+00 2.00e+00]
+    M3obc_in      
+           Size:       4x1
+           Dimensions: boundary
+           Datatype:   double
+           Attributes:
+                       units     = 'second-1'
+                       long_name = '3D momentum inflow, nudging inverse time scale'
+    M3obc_out     
+           Size:       4x1
+           Dimensions: boundary
+           Datatype:   double
+           Attributes:
+                       units     = 'second-1'
+                       long_name = '3D momentum outflow, nudging inverse time scale'
+    rho0          
+           Size:       1x1
+           Dimensions: 
+           Datatype:   double
+           Attributes:
+                       units     = 'kilogram meter-3'
+                       long_name = 'mean density used in Boussinesq approximation'
+    gamma2        
+           Size:       1x1
+           Dimensions: 
+           Datatype:   double
+           Attributes:
+                       long_name = 'slipperiness parameter'
+    LtracerSrc    
+           Size:       2x1
+           Dimensions: tracer
+           Datatype:   int32
+           Attributes:
+                       long_name     = 'tracer point sources and sink activation switch'
+                       flag_values   = [0.00e+00 1.00e+00]
+                       flag_meanings = '.FALSE. .TRUE.'
+    spherical     
+           Size:       1x1
+           Dimensions: 
+           Datatype:   int32
+           Attributes:
+                       long_name     = 'grid type logical switch'
+                       flag_values   = [0.00e+00 1.00e+00]
+                       flag_meanings = 'Cartesian spherical'
+    xl            
+           Size:       1x1
+           Dimensions: 
+           Datatype:   double
+           Attributes:
+                       units     = 'meter'
+                       long_name = 'domain length in the XI-direction'
+    el            
+           Size:       1x1
+           Dimensions: 
+           Datatype:   double
+           Attributes:
+                       units     = 'meter'
+                       long_name = 'domain length in the ETA-direction'
+    Vtransform    
+           Size:       1x1
+           Dimensions: 
+           Datatype:   int32
+           Attributes:
+                       long_name = 'vertical terrain-following transformation equation'
+    Vstretching   
+           Size:       1x1
+           Dimensions: 
+           Datatype:   int32
+           Attributes:
+                       long_name = 'vertical terrain-following stretching function'
+    theta_s       
+           Size:       1x1
+           Dimensions: 
+           Datatype:   double
+           Attributes:
+                       long_name = 'S-coordinate surface control parameter'
+    theta_b       
+           Size:       1x1
+           Dimensions: 
+           Datatype:   double
+           Attributes:
+                       long_name = 'S-coordinate bottom control parameter'
+    Tcline        
+           Size:       1x1
+           Dimensions: 
+           Datatype:   double
+           Attributes:
+                       units     = 'meter'
+                       long_name = 'S-coordinate surface/bottom layer width'
+    hc            
+           Size:       1x1
+           Dimensions: 
+           Datatype:   double
+           Attributes:
+                       units     = 'meter'
+                       long_name = 'S-coordinate parameter, critical depth'
+    Cs_r          
+           Size:       36x1
+           Dimensions: s_rho
+           Datatype:   double
+           Attributes:
+                       long_name = 'S-coordinate stretching curves at RHO-points'
+                       valid_min = -1
+                       valid_max = 0
+                       field     = 'Cs_r, scalar'
+    Cs_w          
+           Size:       37x1
+           Dimensions: s_w
+           Datatype:   double
+           Attributes:
+                       long_name = 'S-coordinate stretching curves at W-points'
+                       valid_min = -1
+                       valid_max = 0
+                       field     = 'Cs_w, scalar'
+    h             
+           Size:       130x82
+           Dimensions: xi_rho,eta_rho
+           Datatype:   double
+           Attributes:
+                       units         = 'meter'
+                       long_name     = 'bathymetry at RHO-points'
+                       coordinates   = 'lat_rho lon_rho '
+                       field         = 'bath, scalar'
+                       _ChunkSize    = [8.20e+01 1.30e+02]
+                       standard_name = 'sea_floor_depth'
+    f             
+           Size:       130x82
+           Dimensions: xi_rho,eta_rho
+           Datatype:   double
+           Attributes:
+                       units       = 'second-1'
+                       long_name   = 'Coriolis parameter at RHO-points'
+                       coordinates = 'lat_rho lon_rho '
+                       field       = 'coriolis, scalar'
+                       _ChunkSize  = [8.20e+01 1.30e+02]
+    pm            
+           Size:       130x82
+           Dimensions: xi_rho,eta_rho
+           Datatype:   double
+           Attributes:
+                       units       = 'meter-1'
+                       long_name   = 'curvilinear coordinate metric in XI'
+                       coordinates = 'lat_rho lon_rho '
+                       field       = 'pm, scalar'
+                       _ChunkSize  = [8.20e+01 1.30e+02]
+    pn            
+           Size:       130x82
+           Dimensions: xi_rho,eta_rho
+           Datatype:   double
+           Attributes:
+                       units       = 'meter-1'
+                       long_name   = 'curvilinear coordinate metric in ETA'
+                       coordinates = 'lat_rho lon_rho '
+                       field       = 'pn, scalar'
+                       _ChunkSize  = [8.20e+01 1.30e+02]
+    angle         
+           Size:       130x82
+           Dimensions: xi_rho,eta_rho
+           Datatype:   double
+           Attributes:
+                       units       = 'radians'
+                       long_name   = 'angle between XI-axis and EAST'
+                       coordinates = 'lat_rho lon_rho '
+                       field       = 'angle, scalar'
+                       _ChunkSize  = [8.20e+01 1.30e+02]
+    mask_rho      
+           Size:       130x82
+           Dimensions: xi_rho,eta_rho
+           Datatype:   double
+           Attributes:
+                       long_name     = 'mask on RHO-points'
+                       flag_values   = [0.00e+00 1.00e+00]
+                       flag_meanings = 'land water'
+                       coordinates   = 'lat_rho lon_rho '
+                       _ChunkSize    = [8.20e+01 1.30e+02]
+    mask_u        
+           Size:       129x82
+           Dimensions: xi_u,eta_u
+           Datatype:   double
+           Attributes:
+                       long_name     = 'mask on U-points'
+                       flag_values   = [0.00e+00 1.00e+00]
+                       flag_meanings = 'land water'
+                       coordinates   = 'lat_u lon_u '
+                       _ChunkSize    = [8.20e+01 1.29e+02]
+    mask_v        
+           Size:       130x81
+           Dimensions: xi_v,eta_v
+           Datatype:   double
+           Attributes:
+                       long_name     = 'mask on V-points'
+                       flag_values   = [0.00e+00 1.00e+00]
+                       flag_meanings = 'land water'
+                       coordinates   = 'lat_v lon_v '
+                       _ChunkSize    = [8.10e+01 1.30e+02]
+    mask_psi      
+           Size:       129x81
+           Dimensions: xi_psi,eta_psi
+           Datatype:   double
+           Attributes:
+                       long_name     = 'mask on psi-points'
+                       flag_values   = [0.00e+00 1.00e+00]
+                       flag_meanings = 'land water'
+                       coordinates   = 'lat_psi lon_psi '
+                       _ChunkSize    = [8.10e+01 1.29e+02]
+    zeta          
+           Size:       130x82x720
+           Dimensions: xi_rho,eta_rho,time
+           Datatype:   single
+           Attributes:
+                       units         = 'meter'
+                       long_name     = 'time-averaged free-surface'
+                       time          = 'ocean_time'
+                       coordinates   = 'time_run time lat_rho lon_rho '
+                       field         = 'free-surface, scalar, series'
+                       _FillValue    = 1e+37
+                       _ChunkSize    = [1.00e+00 8.20e+01 1.30e+02]
+                       standard_name = 'sea_surface_height'
+    ubar          
+           Size:       129x82x720
+           Dimensions: xi_u,eta_u,time
+           Datatype:   single
+           Attributes:
+                       units       = 'meter second-1'
+                       long_name   = 'time-averaged vertically integrated u-momentum component'
+                       time        = 'ocean_time'
+                       coordinates = 'time_run time lat_u lon_u '
+                       field       = 'ubar-velocity, scalar, series'
+                       _FillValue  = 1e+37
+                       _ChunkSize  = [1.00e+00 8.20e+01 1.29e+02]
+    vbar          
+           Size:       130x81x720
+           Dimensions: xi_v,eta_v,time
+           Datatype:   single
+           Attributes:
+                       units       = 'meter second-1'
+                       long_name   = 'time-averaged vertically integrated v-momentum component'
+                       time        = 'ocean_time'
+                       coordinates = 'time_run time lat_v lon_v '
+                       field       = 'vbar-velocity, scalar, series'
+                       _FillValue  = 1e+37
+                       _ChunkSize  = [1.00e+00 8.10e+01 1.30e+02]
+    u             
+           Size:       129x82x36x720
+           Dimensions: xi_u,eta_u,s_rho,time
+           Datatype:   single
+           Attributes:
+                       units         = 'meter second-1'
+                       long_name     = 'time-averaged u-momentum component'
+                       time          = 'ocean_time'
+                       coordinates   = 'time_run time s_rho lat_u lon_u '
+                       field         = 'u-velocity, scalar, series'
+                       _FillValue    = 1e+37
+                       _ChunkSize    = [1.00e+00 3.60e+01 8.20e+01 1.29e+02]
+                       standard_name = 'eastward_sea_water_velocity'
+    v             
+           Size:       130x81x36x720
+           Dimensions: xi_v,eta_v,s_rho,time
+           Datatype:   single
+           Attributes:
+                       units         = 'meter second-1'
+                       long_name     = 'time-averaged v-momentum component'
+                       time          = 'ocean_time'
+                       coordinates   = 'time_run time s_rho lat_v lon_v '
+                       field         = 'v-velocity, scalar, series'
+                       _FillValue    = 1e+37
+                       _ChunkSize    = [1.00e+00 3.60e+01 8.10e+01 1.30e+02]
+                       standard_name = 'northward_sea_water_velocity'
+    omega         
+           Size:       130x82x37x720
+           Dimensions: xi_rho,eta_rho,s_w,time
+           Datatype:   single
+           Attributes:
+                       units       = 'meter3 second-1'
+                       long_name   = 'time-averaged S-coordinate vertical momentum component'
+                       time        = 'ocean_time'
+                       coordinates = 'time_run time s_w lat_rho lon_rho '
+                       field       = 'omega, scalar, series'
+                       _FillValue  = 1e+37
+                       _ChunkSize  = [1.00e+00 3.70e+01 8.20e+01 1.30e+02]
+    w             
+           Size:       130x82x37x720
+           Dimensions: xi_rho,eta_rho,s_w,time
+           Datatype:   single
+           Attributes:
+                       units       = 'meter second-1'
+                       long_name   = 'time-averaged vertical momentum component'
+                       time        = 'ocean_time'
+                       coordinates = 'time_run time s_w lat_rho lon_rho '
+                       field       = 'w-velocity, scalar, series'
+                       _FillValue  = 1e+37
+                       _ChunkSize  = [1.00e+00 3.70e+01 8.20e+01 1.30e+02]
+    temp          
+           Size:       130x82x36x720
+           Dimensions: xi_rho,eta_rho,s_rho,time
+           Datatype:   single
+           Attributes:
+                       units         = 'Celsius'
+                       long_name     = 'time-averaged potential temperature'
+                       time          = 'ocean_time'
+                       coordinates   = 'time_run time s_rho lat_rho lon_rho '
+                       field         = 'temperature, scalar, series'
+                       _FillValue    = 1e+37
+                       _ChunkSize    = [1.00e+00 3.60e+01 8.20e+01 1.30e+02]
+                       standard_name = 'sea_water_potential_temperature'
+    salt          
+           Size:       130x82x36x720
+           Dimensions: xi_rho,eta_rho,s_rho,time
+           Datatype:   single
+           Attributes:
+                       long_name     = 'time-averaged salinity'
+                       time          = 'ocean_time'
+                       coordinates   = 'time_run time s_rho lat_rho lon_rho '
+                       field         = 'salinity, scalar, series'
+                       _FillValue    = 1e+37
+                       _ChunkSize    = [1.00e+00 3.60e+01 8.20e+01 1.30e+02]
+                       standard_name = 'sea_water_salinity'
+    rho           
+           Size:       130x82x36x720
+           Dimensions: xi_rho,eta_rho,s_rho,time
+           Datatype:   single
+           Attributes:
+                       units       = 'kilogram meter-3'
+                       long_name   = 'time-averaged density anomaly'
+                       time        = 'ocean_time'
+                       coordinates = 'time_run time s_rho lat_rho lon_rho '
+                       field       = 'density, scalar, series'
+                       _FillValue  = 1e+37
+                       _ChunkSize  = [1.00e+00 3.60e+01 8.20e+01 1.30e+02]
+    shflux        
+           Size:       130x82x720
+           Dimensions: xi_rho,eta_rho,time
+           Datatype:   single
+           Attributes:
+                       units          = 'watt meter-2'
+                       long_name      = 'time-averaged surface net heat flux'
+                       negative_value = 'upward flux, cooling'
+                       positive_value = 'downward flux, heating'
+                       time           = 'ocean_time'
+                       coordinates    = 'time_run time lat_rho lon_rho '
+                       field          = 'surface heat flux, scalar, series'
+                       _FillValue     = 1e+37
+                       _ChunkSize     = [1.00e+00 8.20e+01 1.30e+02]
+    ssflux        
+           Size:       130x82x720
+           Dimensions: xi_rho,eta_rho,time
+           Datatype:   single
+           Attributes:
+                       units          = 'meter second-1'
+                       long_name      = 'time-averaged surface net salt flux, (E-P)*SALT'
+                       negative_value = 'upward flux, freshening (net precipitation)'
+                       positive_value = 'downward flux, salting (net evaporation)'
+                       time           = 'ocean_time'
+                       coordinates    = 'time_run time lat_rho lon_rho '
+                       field          = 'surface net salt flux, scalar, series'
+                       _FillValue     = 1e+37
+                       _ChunkSize     = [1.00e+00 8.20e+01 1.30e+02]
+    sustr         
+           Size:       129x82x720
+           Dimensions: xi_u,eta_u,time
+           Datatype:   single
+           Attributes:
+                       units       = 'newton meter-2'
+                       long_name   = 'time-averaged surface u-momentum stress'
+                       time        = 'ocean_time'
+                       coordinates = 'time_run time lat_u lon_u '
+                       field       = 'surface u-momentum stress, scalar, series'
+                       _FillValue  = 1e+37
+                       _ChunkSize  = [1.00e+00 8.20e+01 1.29e+02]
+    svstr         
+           Size:       130x81x720
+           Dimensions: xi_v,eta_v,time
+           Datatype:   single
+           Attributes:
+                       units       = 'newton meter-2'
+                       long_name   = 'time-averaged surface v-momentum stress'
+                       time        = 'ocean_time'
+                       coordinates = 'time_run time lat_v lon_v '
+                       field       = 'surface v-momentum stress, scalar, series'
+                       _FillValue  = 1e+37
+                       _ChunkSize  = [1.00e+00 8.10e+01 1.30e+02]
+    bustr         
+           Size:       129x82x720
+           Dimensions: xi_u,eta_u,time
+           Datatype:   single
+           Attributes:
+                       units       = 'newton meter-2'
+                       long_name   = 'time-averaged bottom u-momentum stress'
+                       time        = 'ocean_time'
+                       coordinates = 'time_run time lat_u lon_u '
+                       field       = 'bottom u-momentum stress, scalar, series'
+                       _FillValue  = 1e+37
+                       _ChunkSize  = [1.00e+00 8.20e+01 1.29e+02]
+    bvstr         
+           Size:       130x81x720
+           Dimensions: xi_v,eta_v,time
+           Datatype:   single
+           Attributes:
+                       units       = 'newton meter-2'
+                       long_name   = 'time-averaged bottom v-momentum stress'
+                       time        = 'ocean_time'
+                       coordinates = 'time_run time lat_v lon_v '
+                       field       = 'bottom v-momentum stress, scalar, series'
+                       _FillValue  = 1e+37
+                       _ChunkSize  = [1.00e+00 8.10e+01 1.30e+02]
+    time_offset   
+           Size:       720x1
+           Dimensions: time
+           Datatype:   double
+           Attributes:
+                       long_name     = 'offset hour from start of run for coordinate = time'
+                       standard_name = 'forecast_period'
+                       units         = 'hours since 2013-05-18T00:00:00Z'
+                       missing_value = NaN
+    s_rho         
+           Size:       36x1
+           Dimensions: s_rho
+           Datatype:   double
+           Attributes:
+                       units                    = ''
+                       long_name                = 'S-coordinate at RHO-points'
+                       valid_min                = -1
+                       valid_max                = 0
+                       positive                 = 'up'
+                       standard_name            = 'ocean_s_coordinate_g1'
+                       formula_terms            = 's: s_rho C: Cs_r eta: zeta depth: h depth_c: hc'
+                       field                    = 's_rho, scalar'
+                       _CoordinateTransformType = 'Vertical'
+                       _CoordinateAxisType      = 'GeoZ'
+                       _CoordinateZisPositive   = 'up'
+                       _CoordinateAxes          = 's_rho'
+    s_w           
+           Size:       37x1
+           Dimensions: s_w
+           Datatype:   double
+           Attributes:
+                       units                    = ''
+                       long_name                = 'S-coordinate at W-points'
+                       valid_min                = -1
+                       valid_max                = 0
+                       positive                 = 'up'
+                       standard_name            = 'ocean_s_coordinate_g1'
+                       formula_terms            = 's: s_w C: Cs_w eta: zeta depth: h depth_c: hc'
+                       field                    = 's_w, scalar'
+                       _CoordinateTransformType = 'Vertical'
+                       _CoordinateAxisType      = 'GeoZ'
+                       _CoordinateZisPositive   = 'up'
+                       _CoordinateAxes          = 's_w'
+    lon_rho       
+           Size:       130x82
+           Dimensions: xi_rho,eta_rho
+           Datatype:   double
+           Attributes:
+                       units               = 'degrees_east'
+                       long_name           = 'longitude of RHO-points'
+                       standard_name       = 'longitude'
+                       field               = 'lon_rho, scalar'
+                       _ChunkSize          = [8.20e+01 1.30e+02]
+                       _CoordinateAxisType = 'Lon'
+    lat_rho       
+           Size:       130x82
+           Dimensions: xi_rho,eta_rho
+           Datatype:   double
+           Attributes:
+                       units               = 'degrees_north'
+                       long_name           = 'latitude of RHO-points'
+                       standard_name       = 'latitude'
+                       field               = 'lat_rho, scalar'
+                       _ChunkSize          = [8.20e+01 1.30e+02]
+                       _CoordinateAxisType = 'Lat'
+    lon_u         
+           Size:       129x82
+           Dimensions: xi_u,eta_u
+           Datatype:   double
+           Attributes:
+                       units               = 'degrees_east'
+                       long_name           = 'longitude of U-points'
+                       standard_name       = 'longitude'
+                       field               = 'lon_u, scalar'
+                       _ChunkSize          = [8.20e+01 1.29e+02]
+                       _CoordinateAxisType = 'Lon'
+    lat_u         
+           Size:       129x82
+           Dimensions: xi_u,eta_u
+           Datatype:   double
+           Attributes:
+                       units               = 'degrees_north'
+                       long_name           = 'latitude of U-points'
+                       standard_name       = 'latitude'
+                       field               = 'lat_u, scalar'
+                       _ChunkSize          = [8.20e+01 1.29e+02]
+                       _CoordinateAxisType = 'Lat'
+    lon_v         
+           Size:       130x81
+           Dimensions: xi_v,eta_v
+           Datatype:   double
+           Attributes:
+                       units               = 'degrees_east'
+                       long_name           = 'longitude of V-points'
+                       standard_name       = 'longitude'
+                       field               = 'lon_v, scalar'
+                       _ChunkSize          = [8.10e+01 1.30e+02]
+                       _CoordinateAxisType = 'Lon'
+    lat_v         
+           Size:       130x81
+           Dimensions: xi_v,eta_v
+           Datatype:   double
+           Attributes:
+                       units               = 'degrees_north'
+                       long_name           = 'latitude of V-points'
+                       standard_name       = 'latitude'
+                       field               = 'lat_v, scalar'
+                       _ChunkSize          = [8.10e+01 1.30e+02]
+                       _CoordinateAxisType = 'Lat'
+    lon_psi       
+           Size:       129x81
+           Dimensions: xi_psi,eta_psi
+           Datatype:   double
+           Attributes:
+                       units               = 'degrees_east'
+                       long_name           = 'longitude of PSI-points'
+                       standard_name       = 'longitude'
+                       field               = 'lon_psi, scalar'
+                       _ChunkSize          = [8.10e+01 1.29e+02]
+                       _CoordinateAxisType = 'Lon'
+    lat_psi       
+           Size:       129x81
+           Dimensions: xi_psi,eta_psi
+           Datatype:   double
+           Attributes:
+                       units               = 'degrees_north'
+                       long_name           = 'latitude of PSI-points'
+                       standard_name       = 'latitude'
+                       field               = 'lat_psi, scalar'
+                       _ChunkSize          = [8.10e+01 1.29e+02]
+                       _CoordinateAxisType = 'Lat'
+    ocean_time    
+           Size:       1x1
+           Dimensions: ocean_time
+           Datatype:   double
+           Attributes:
+                       units               = 'seconds since 2006-01-01 00:00:00'
+                       long_name           = 'averaged time since initialization'
+                       calendar            = 'gregorian'
+                       field               = 'time, scalar, series'
+                       _ChunkSize          = 1
+                       _CoordinateAxisType = 'Time'
+    time          
+           Size:       720x1
+           Dimensions: time
+           Datatype:   double
+           Attributes:
+                       long_name           = 'Forecast time for ForecastModelRunCollection'
+                       standard_name       = 'time'
+                       units               = 'hours since 2013-05-18T00:00:00Z'
+                       missing_value       = NaN
+                       _CoordinateAxisType = 'Time'
+    time_run      
+           Size:       720x1
+           Dimensions: time
+           Datatype:   double
+           Attributes:
+                       long_name           = 'run times for coordinate = time'
+                       standard_name       = 'forecast_reference_time'
+                       units               = 'hours since 2013-05-18T00:00:00Z'
+                       missing_value       = NaN
+                       _CoordinateAxisType = 'RunTime'

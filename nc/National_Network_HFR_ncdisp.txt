@@ -1,0 +1,200 @@
+Source:
+           http://hfrnet.ucsd.edu/thredds/dodsC/HFR/USEGC/6km/hourly/RTV/HFRADAR,_US_East_and_Gulf_Coast,_6km_Resolution,_Hourly_RTV_best.ncd
+Format:
+           64bit
+Global Attributes:
+           netcdf_library_version = '4.1.3'
+           format_version         = 'HFRNet_1.0.0'
+           product_version        = 'HFRNet_1.1.05'
+           Conventions            = 'CF-1.4, _Coordinates'
+           title                  = 'Near-Real Time Surface Ocean Velocity, U.S. East
+                                    and Gulf Coast, 6 km Resolution'
+           institution            = 'Scripps Institution of Oceanography'
+           source                 = 'Surface Ocean HF-Radar'
+           history                = '02-Sep-2016 02:36:05: NetCDF file created
+                                    02-Sep-2016 02:36:05: Filtered U and V by GDOP < 1.25 ;
+                                    FMRC Best Dataset'
+           references             = 'Terrill, E. et al., 2006. Data Management and Real-time
+                                    Distribution in the HF-Radar National Network. Proceedings
+                                    of the MTS/IEEE Oceans 2006 Conference, Boston MA,
+                                    September 2006.'
+           creator_name           = 'Mark Otero'
+           creator_email          = 'motero@ucsd.edu'
+           creator_url            = 'http://cordc.ucsd.edu/projects/mapping/'
+           summary                = 'Surface ocean velocities estimated from HF-Radar are
+                                    representative of the upper 0.3 - 2.5 meters of the
+                                    ocean.  The main objective of near-real time
+                                    processing is to produce the best product from
+                                    available data at the time of processing.  Radial
+                                    velocity measurements are obtained from individual
+                                    radar sites through the U.S. HF-Radar Network.
+                                    Hourly radial data are processed by unweighted
+                                    least-squares on a 6 km resolution grid of the U.S.
+                                    East and Gulf Coast to produce near real-time surface
+                                    current maps.'
+           geospatial_lat_min     = 21.736
+           geospatial_lat_max     = 46.4944
+           geospatial_lon_min     = -97.8839
+           geospatial_lon_max     = -57.2312
+           grid_resolution        = '6km'
+           grid_projection        = 'equidistant cylindrical'
+           regional_description   = 'Unites States, East and Gulf Coast'
+           _CoordSysBuilder       = 'ucar.nc2.dataset.conv.CF1Convention'
+           cdm_data_type          = 'GRID'
+           featureType            = 'GRID'
+           location               = 'Proto fmrc:HFRADAR,_US_East_and_Gulf_Coast,_6km_Resolution,_Hourly_RTV'
+Dimensions:
+           lat              = 460
+           lon              = 701
+           nProcParam       = 7
+           nSites           = 30
+           nSites_maxStrlen = 25
+           time             = 41554
+Variables:
+    site_lat    
+           Size:       30x1
+           Dimensions: nSites
+           Datatype:   single
+           Attributes:
+                       units         = 'degrees_north'
+                       long_name     = 'Contributing radar site latitudes'
+                       standard_name = 'latitude'
+    site_lon    
+           Size:       30x1
+           Dimensions: nSites
+           Datatype:   single
+           Attributes:
+                       units         = 'degrees_east'
+                       long_name     = 'Contributing radar site longitudes'
+                       standard_name = 'longitude'
+    site_code   
+           Size:       25x30
+           Dimensions: nSites_maxStrlen,nSites
+           Datatype:   char
+           Attributes:
+                       long_name = 'Contributing radar site code'
+    site_netCode
+           Size:       25x30
+           Dimensions: nSites_maxStrlen,nSites
+           Datatype:   char
+           Attributes:
+                       long_name = 'Contributing radar site network affiliation code'
+    procParams  
+           Size:       7x1
+           Dimensions: nProcParam
+           Datatype:   single
+           Attributes:
+                       long_name = 'RTV processing parameters'
+                       comment   = '
+                                   01) Maximum GDOP threshold
+                                   02) Maximum speed threshold (cm s-1)
+                                   03) Minimum number of sites required
+                                   04) Minimum number of radials required
+                                   05) Maximum angular gap to interpolate radial
+                                       data over (degrees, 0 = no interpolation)
+                                   06) Maximum gap in range to interpolate radial
+                                       data over (range-resolution, 0 = no interpolation)
+                                   07) Spatial search radius for radial solutions (km)'
+    time_offset 
+           Size:       41554x1
+           Dimensions: time
+           Datatype:   double
+           Attributes:
+                       long_name     = 'offset hour from start of run for coordinate = time'
+                       standard_name = 'forecast_period'
+                       units         = 'hours since 2012-01-01T00:00:00Z'
+                       missing_value = NaN
+    lat         
+           Size:       460x1
+           Dimensions: lat
+           Datatype:   single
+           Attributes:
+                       units               = 'degrees_north'
+                       long_name           = 'latitude'
+                       standard_name       = 'latitude'
+                       _CoordinateAxisType = 'Lat'
+    lon         
+           Size:       701x1
+           Dimensions: lon
+           Datatype:   single
+           Attributes:
+                       units               = 'degrees_east'
+                       long_name           = 'longitude'
+                       standard_name       = 'longitude'
+                       _CoordinateAxisType = 'Lon'
+    time        
+           Size:       41554x1
+           Dimensions: time
+           Datatype:   double
+           Attributes:
+                       long_name           = 'Forecast time for ForecastModelRunCollection'
+                       standard_name       = 'time'
+                       units               = 'hours since 2012-01-01T00:00:00Z'
+                       missing_value       = NaN
+                       _CoordinateAxisType = 'Time'
+    time_run    
+           Size:       41554x1
+           Dimensions: time
+           Datatype:   double
+           Attributes:
+                       long_name           = 'run times for coordinate = time'
+                       standard_name       = 'forecast_reference_time'
+                       units               = 'hours since 2012-01-01T00:00:00Z'
+                       missing_value       = NaN
+                       _CoordinateAxisType = 'RunTime'
+    u           
+           Size:       701x460x41554
+           Dimensions: lon,lat,time
+           Datatype:   single
+           Attributes:
+                       units               = 'm s-1'
+                       long_name           = 'surface_eastward_sea_water_velocity'
+                       standard_name       = 'surface_eastward_sea_water_velocity'
+                       ancillary_variables = 'DOPx'
+                       _ChunkSize          = [1  460  701]
+                       coordinates         = 'time_run time lat lon '
+    v           
+           Size:       701x460x41554
+           Dimensions: lon,lat,time
+           Datatype:   single
+           Attributes:
+                       units               = 'm s-1'
+                       long_name           = 'surface_northward_sea_water_velocity'
+                       standard_name       = 'surface_northward_sea_water_velocity'
+                       ancillary_variables = 'DOPy'
+                       _ChunkSize          = [1  460  701]
+                       coordinates         = 'time_run time lat lon '
+    DOPx        
+           Size:       701x460x41554
+           Dimensions: lon,lat,time
+           Datatype:   single
+           Attributes:
+                       long_name   = 'longitudinal dilution of precision'
+                       comment     = 'The longitudinal dilution of precision (DOPx) represents the
+                                     contribution of the radars' configuration geometry to
+                                     uncertainty in the eastward velocity estimate (u). DOPx is a
+                                     direct multiplier of the standard error in obtaining the
+                                     standard deviation for the eastward velocity estimate from the
+                                     least squares best fit. DOPx and DOPy are commonly used to
+                                     obtain the geometric dilution of precision
+                                     (GDOP = sqrt(DOPx^2 + DOPy^2)), a useful metric for filtering
+                                     errant velocities due to poor geometry.'
+                       _ChunkSize  = [1  460  701]
+                       coordinates = 'time_run time lat lon '
+    DOPy        
+           Size:       701x460x41554
+           Dimensions: lon,lat,time
+           Datatype:   single
+           Attributes:
+                       long_name   = 'latitudinal dilution of precision'
+                       comment     = 'The latitudinal dilution of precision (DOPy) represents the
+                                     contribution of the radars' configuration geometry to
+                                     uncertainty in the northward velocity estimate (v). DOPy is a
+                                     direct multiplier of the standard error in obtaining the
+                                     standard deviation for the northward velocity estimate from the
+                                     least squares best fit. DOPx and DOPy are commonly used to
+                                     obtain the geometric dilution of precision
+                                     (GDOP = sqrt(DOPx^2 + DOPy^2)), a useful metric for filtering
+                                     errant velocities due to poor geometry.'
+                       _ChunkSize  = [1  460  701]
+                       coordinates = 'time_run time lat lon '

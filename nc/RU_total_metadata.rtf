@@ -1,0 +1,101 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1038\cocoasubrtf360
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww23420\viewh14100\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural\pardirnatural
+
+\f0\fs24 \cf0 >> nc_dump('RU_5MHz_2012_08_01_0000.totals.nc')\
+NetCDF-4 Classic RU_5MHz_2012_08_01_0000.totals.nc \{\
+\
+dimensions:\
+	lon = 155 ;\
+	lat = 185 ;\
+	time = UNLIMITED ; (1 currently)\
+\
+variables:\
+	// Preference 'PRESERVE_FVD':  false,\
+	// dimensions consistent with ncBrowse, not with native MATLAB netcdf package.\
+	double time(time), shape = [1]\
+		Chunking: [ 1 ]\
+		time:longname = "Time" \
+		time:calendar = "gregorian" \
+		time:units = "days since 2001-01-01 00:00:00" \
+	single lon(lon), shape = [155]\
+		Chunking: [ 155 ]\
+		lon:_FillValue = -999.000000 f\
+		lon:longname = "Longitude" \
+		lon:shortname = "lon" \
+		lon:units = "degrees_east" \
+	single lat(lat), shape = [185]\
+		Chunking: [ 185 ]\
+		lat:_FillValue = -999.000000 f\
+		lat:longname = "Latitude" \
+		lat:shortname = "lat" \
+		lat:units = "degrees_north" \
+	single u(time,lat,lon), shape = [1 185 155]\
+		Chunking: [ 1 185 155 ]\
+		u:_FillValue = -999.000000 f\
+		u:longname = "Eastward Velocity" \
+		u:standard_name = "surface_eastward_sea_water_velocity" \
+		u:shortname = "u" \
+		u:units = "cm/s" \
+	single v(time,lat,lon), shape = [1 185 155]\
+		Chunking: [ 1 185 155 ]\
+		v:_FillValue = -999.000000 f\
+		v:longname = "Northward Velocity" \
+		v:standard_name = "surface_northward_sea_water_velocity" \
+		v:shortname = "v" \
+		v:units = "cm/s" \
+	single u_err(time,lat,lon), shape = [1 185 155]\
+		Chunking: [ 1 185 155 ]\
+		u_err:_FillValue = -999.000000 f\
+	single v_err(time,lat,lon), shape = [1 185 155]\
+		Chunking: [ 1 185 155 ]\
+		v_err:_FillValue = -999.000000 f\
+	int32 num_radials(time,lat,lon), shape = [1 185 155]\
+		Chunking: [ 1 185 155 ]\
+		num_radials:_FillValue = -999 d\
+	int32 site_code(time,lat,lon), shape = [1 185 155]\
+		Chunking: [ 1 185 155 ]\
+		site_code:_FillValue = -999 d\
+\
+//global Attributes:\
+		:header = "%TimeStamp: 2012 08 01 00 00\
+%TimeZone: GMT+0.000\
+%Domain: MARA\
+%Type: OI\
+%DataCreationInfo: Rutgers/MARACOOS Domain\
+%DataCreationTimeStamp: 31-Jul-2012 23:16:11\
+%DataCreationTimeZone: GMT\
+%ProcessingProgram: TUVstruct2ascii_OI 31-Jul-2012 23:17:14\
+%TUV_structVersion: SVN $Rev: 396 $ $Date: 2007-04-02 16:56:29 +0000 (Mon, 02 Apr 2007) $\
+%MinNumSites:    2\
+%MinNumRads:   3\
+%mdlvar: 420.00\
+%errvar:  66.00\
+%sx:  10.00\
+%sy:  25.00\
+%tempthresh: 0.020833\
+%Longitude  Latitude  U comp  V comp    Uerr   Verr   NumRad   Site\
+% (deg)      (deg)    (cm/s)  (cm/s)  (norm) (norm)            Code\
+" \
+		:Conventions = "CF 1.6" \
+		:creation_date = "Mon Aug 13 10:11:34 2012 EDT" \
+		:creator_name = "John Kerfoot" \
+		:creator_email = "kerfoot@marine.rutgers.edu" \
+		:institution = "Coastal Ocean Observation Lab, Institute of Marine & Coastal Sciences, Rutgers University" \
+		:id = "RU_5MHz_2012_08_01_0000" \
+		:naming_authority = "edu.rutgers.marine.rucool" \
+		:title = "MARACOOS 5MHz Sea Surface Currents" \
+		:summary = "Optimally Interpolated Total Vectors calculated by HFRProgs toolbox using MATLAB. Mercator lat/lon projection using 6km grid." \
+		:keywords = "codar, totals, vectors, currents, optimal, interpolation, 6km" \
+		:geospatial_lat_min = 33.5488 \
+		:geospatial_lat_max = 43.4738 \
+		:geospatial_lat_units = "degrees_north" \
+		:geospatial_lon_min = -76.9768 \
+		:geospatial_lon_max = -68.0332 \
+		:geospatial_lon_units = "degrees_east" \
+		:history = "Hourly codar radial data combined into one hourly file containing vectors. See source attribute" \
+		:source = "surface observation" \
+\
+\}}

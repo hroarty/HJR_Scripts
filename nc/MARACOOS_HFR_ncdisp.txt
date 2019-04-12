@@ -1,0 +1,164 @@
+Source:
+           http://tds.marine.rutgers.edu:8080/thredds/dodsC/cool/codar/totals/5Mhz_6km_realtime_fmrc/Maracoos_5MHz_6km_Totals-FMRC_best.ncd
+Format:
+           64bit
+Global Attributes:
+           header               = '%TimeZone: GMT+0.000
+                                  %Domain: MARA
+                                  %Type: OI
+                                  %DataCreationInfo: Rutgers/MARACOOS Domain
+                                  %DataCreationTimeZone: GMT
+                                  %ProcessingProgram: TUVstruct2ascii_OI 31-May-2013 09:18:47
+                                  %TUV_structVersion: SVN $Rev: 396 $ $Date: 2007-04-02 16:56:29 +0000 (Mon, 02 Apr 2007) $
+                                  %MinNumSites:    2
+                                  %MinNumRads:   3
+                                  %mdlvar: 420.00
+                                  %errvar:  66.00
+                                  %sx:  10.00
+                                  %sy:  25.00
+                                  %tempthresh: 0.020833
+                                  %Longitude  Latitude  U comp  V comp    Uerr   Verr   NumRad   Site
+                                  % (deg)      (deg)    (cm/s)  (cm/s)  (norm) (norm)            Code
+                                  '
+           Conventions          = 'CF-1.4, CF, 1.6'
+           creator_name         = 'Michael Smith'
+           creator_email        = 'michaesm@marine.rutgers.edu'
+           institution          = 'Coastal Ocean Observation Lab, Institute of Marine & Coastal Sciences, Rutgers University'
+           naming_authority     = 'edu.rutgers.marine.rucool'
+           title                = 'MARACOOS 5MHz Sea Surface Currents'
+           summary              = 'Optimally Interpolated Total Vectors calculated by HFRProgs toolbox using MATLAB. Mercator lat/lon projection using 6km grid.'
+           keywords             = 'codar, totals, vectors, currents, optimal, interpolation, 6km'
+           geospatial_lat_min   = 33.5488
+           geospatial_lat_max   = 43.4738
+           geospatial_lat_units = 'degrees_north'
+           geospatial_lon_min   = -76.9768
+           geospatial_lon_max   = -68.0332
+           geospatial_lon_units = 'degrees_east'
+           history              = 'Hourly codar radial data combined into one hourly file containing vectors. See source attribute ;
+                                  FMRC Best Dataset'
+           source               = 'surface observation'
+           _CoordSysBuilder     = 'ucar.nc2.dataset.conv.CF1Convention'
+           cdm_data_type        = 'GRID'
+           featureType          = 'GRID'
+           location             = 'Proto fmrc:5MHz_6km_realtime_codar_fmrc'
+Dimensions:
+           lat  = 185
+           lon  = 155
+           time = 94117
+Variables:
+    lon        
+           Size:       155x1
+           Dimensions: lon
+           Datatype:   single
+           Attributes:
+                       units               = 'degrees_east'
+                       long_name           = 'longitude'
+                       _FillValue          = -999
+                       longname            = 'Longitude'
+                       shortname           = 'lon'
+                       _ChunkSizes         = 155
+                       _CoordinateAxisType = 'Lon'
+                       standard_name       = 'longitude'
+    lat        
+           Size:       185x1
+           Dimensions: lat
+           Datatype:   single
+           Attributes:
+                       units               = 'degrees_north'
+                       long_name           = 'latitude'
+                       _FillValue          = -999
+                       longname            = 'Latitude'
+                       shortname           = 'lat'
+                       _ChunkSizes         = 185
+                       _CoordinateAxisType = 'Lat'
+                       standard_name       = 'latitude'
+    time       
+           Size:       94117x1
+           Dimensions: time
+           Datatype:   double
+           Attributes:
+                       long_name           = 'Forecast time for ForecastModelRunCollection'
+                       standard_name       = 'time'
+                       calendar            = 'proleptic_gregorian'
+                       units               = 'hours since 2006-01-01 00:00:00.000 UTC'
+                       missing_value       = NaN
+                       _CoordinateAxisType = 'Time'
+    time_run   
+           Size:       94117x1
+           Dimensions: time
+           Datatype:   double
+           Attributes:
+                       long_name           = 'run times for coordinate = time'
+                       standard_name       = 'forecast_reference_time'
+                       calendar            = 'proleptic_gregorian'
+                       units               = 'hours since 2006-01-01 00:00:00.000 UTC'
+                       missing_value       = NaN
+                       _CoordinateAxisType = 'RunTime'
+    time_offset
+           Size:       94117x1
+           Dimensions: time
+           Datatype:   double
+           Attributes:
+                       long_name     = 'offset hour from start of run for coordinate = time'
+                       standard_name = 'forecast_period'
+                       calendar      = 'proleptic_gregorian'
+                       units         = 'hours since 2006-01-01T00:00:00Z'
+                       missing_value = NaN
+    u          
+           Size:       155x185x94117
+           Dimensions: lon,lat,time
+           Datatype:   single
+           Attributes:
+                       units         = 'cm/s'
+                       long_name     = 'surface_eastward_sea_water_velocity'
+                       _FillValue    = -999
+                       longname      = 'Eastward Velocity'
+                       standard_name = 'surface_eastward_sea_water_velocity'
+                       shortname     = 'u'
+                       _ChunkSizes   = [1  185  155]
+                       coordinates   = 'time_run time lat lon '
+    v          
+           Size:       155x185x94117
+           Dimensions: lon,lat,time
+           Datatype:   single
+           Attributes:
+                       units         = 'cm/s'
+                       long_name     = 'surface_northward_sea_water_velocity'
+                       standard_name = 'surface_northward_sea_water_velocity'
+                       shortname     = 'v'
+                       _FillValue    = -999
+                       longname      = 'Northward Velocity'
+                       _ChunkSizes   = [1  185  155]
+                       coordinates   = 'time_run time lat lon '
+    u_err      
+           Size:       155x185x94117
+           Dimensions: lon,lat,time
+           Datatype:   single
+           Attributes:
+                       _FillValue  = -999
+                       _ChunkSizes = [1  185  155]
+                       coordinates = 'time_run time lat lon '
+    v_err      
+           Size:       155x185x94117
+           Dimensions: lon,lat,time
+           Datatype:   single
+           Attributes:
+                       _FillValue  = -999
+                       _ChunkSizes = [1  185  155]
+                       coordinates = 'time_run time lat lon '
+    num_radials
+           Size:       155x185x94117
+           Dimensions: lon,lat,time
+           Datatype:   int32
+           Attributes:
+                       _FillValue  = -999
+                       _ChunkSizes = [1  185  155]
+                       coordinates = 'time_run time lat lon '
+    site_code  
+           Size:       155x185x94117
+           Dimensions: lon,lat,time
+           Datatype:   int32
+           Attributes:
+                       _FillValue  = -999
+                       _ChunkSizes = [1  185  155]
+                       coordinates = 'time_run time lat lon '

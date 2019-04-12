@@ -1,0 +1,152 @@
+K>> ncdisp(f)
+Source:
+           /Volumes/nazzaro/codar_10yr/error0.60/december/2007_totals_aggregated_postproc.nc
+Format:
+           netcdf4_classic
+Global Attributes:
+           raw_data_source      = '/home/nazzaro/codar_10yr/2007_totals_aggregated.nc'
+           top_five_tidal_nodes = 'MF,MM,MSF,MSM,SSA'
+Dimensions:
+           lon  = 155
+           lat  = 185
+           time = 8749
+Variables:
+    lon                
+           Size:       155x1
+           Dimensions: lon
+           Datatype:   single
+           Attributes:
+                       _FillValue = -999
+                       longname   = 'Longitude'
+                       shortname  = 'lon'
+                       units      = 'degrees_east'
+    lat                
+           Size:       185x1
+           Dimensions: lat
+           Datatype:   single
+           Attributes:
+                       _FillValue = -999
+                       longname   = 'Latitude'
+                       shortname  = 'lat'
+                       units      = 'degrees_north'
+    time               
+           Size:       8749x1
+           Dimensions: time
+           Datatype:   single
+           Attributes:
+                       _FillValue = -999
+                       longname   = 'Time'
+                       units      = 'seconds since 1970-01-01 00:00:00'
+                       calendar   = 'proleptic_gregorian'
+    num_totals         
+           Size:       155x185
+           Dimensions: lon,lat
+           Datatype:   int32
+           Attributes:
+                       _FillValue = -999
+                       comment    = 'number of totals measurements calculated at each gridpoint over the year'
+    u                  
+           Size:       155x185x8749
+           Dimensions: lon,lat,time
+           Datatype:   single
+           Attributes:
+                       _FillValue = -999
+                       longname   = 'Eastward Velocity'
+                       shortname  = 'u'
+                       units      = 'cm/s'
+                       comment    = 'velocities with uncertainty >= 0.6 are removed.'
+    v                  
+           Size:       155x185x8749
+           Dimensions: lon,lat,time
+           Datatype:   single
+           Attributes:
+                       _FillValue = -999
+                       longname   = 'Northward Velocity'
+                       shortname  = 'v'
+                       units      = 'cm/s'
+                       comment    = 'velocities with uncertainty >= 0.6 are removed.'
+    u_err              
+           Size:       155x185x8749
+           Dimensions: lon,lat,time
+           Datatype:   single
+           Attributes:
+                       _FillValue = -999
+                       longname   = 'Eastward Velocity Uncertainty'
+                       shortname  = 'u_err'
+                       comment    = 'velocities with uncertainty >= 0.6 are removed.'
+    v_err              
+           Size:       155x185x8749
+           Dimensions: lon,lat,time
+           Datatype:   single
+           Attributes:
+                       _FillValue = -999
+                       longname   = 'Northward Velocity Uncertainty'
+                       shortname  = 'v_err'
+                       comment    = 'velocities with uncertainty >= 0.6 are removed.'
+    u_tidal            
+           Size:       155x185x8749
+           Dimensions: lon,lat,time
+           Datatype:   single
+           Attributes:
+                       _FillValue = -999
+                       longname   = 'Tidal Eastward Velocity'
+                       shortname  = 'utide'
+                       units      = 'cm/s'
+                       comment    = 'calculated using MATLAB t_tide toolbox if coverage at grid point is >=50%'
+    v_tidal            
+           Size:       155x185x8749
+           Dimensions: lon,lat,time
+           Datatype:   single
+           Attributes:
+                       _FillValue = -999
+                       longname   = 'Tidal Northward Velocity'
+                       shortname  = 'vtide'
+                       units      = 'cm/s'
+                       comment    = 'calculated using MATLAB t_tide toolbox if coverage at grid point is >=50%'
+    tidal_var_explained
+           Size:       155x185
+           Dimensions: lon,lat
+           Datatype:   single
+           Attributes:
+                       _FillValue = -999
+                       comment    = 'percent of variability in raw surface current variability that is explained by the tides calculated by t_tide'
+    u_detided          
+           Size:       155x185x8749
+           Dimensions: lon,lat,time
+           Datatype:   single
+           Attributes:
+                       _FillValue = -999
+                       longname   = 'Detided Eastward Velocity'
+                       shortname  = 'udet'
+                       units      = 'cm/s'
+                       comment    = 'raw u with tidal u removed'
+    v_detided          
+           Size:       155x185x8749
+           Dimensions: lon,lat,time
+           Datatype:   single
+           Attributes:
+                       _FillValue = -999
+                       longname   = 'Detided Northward Velocity'
+                       shortname  = 'vdet'
+                       units      = 'cm/s'
+                       comment    = 'raw v with tidal v removed'
+    u_filtered         
+           Size:       155x185x8749
+           Dimensions: lon,lat,time
+           Datatype:   single
+           Attributes:
+                       _FillValue = -999
+                       longname   = 'Low-Pass Filtered Eastward Velocity'
+                       shortname  = 'ufilt'
+                       units      = 'cm/s'
+                       comment    = 'detided u run through a 30-hour lowpass filter'
+    v_filtered         
+           Size:       155x185x8749
+           Dimensions: lon,lat,time
+           Datatype:   single
+           Attributes:
+                       _FillValue = -999
+                       longname   = 'Low-Pass Filtered Northward Velocity'
+                       shortname  = 'vfilt'
+                       units      = 'cm/s'
+                       comment    = 'detided v run through a 30-hour lowpass filter'

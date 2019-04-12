@@ -1,0 +1,118 @@
+ncdisp('RU_5MHz_2016_10_25_0400.totals.nc');
+Source:
+           /Users/hroarty/data/totals/RU_5MHz_2016_10_25_0400.totals.nc
+Format:
+           netcdf4_classic
+Global Attributes:
+           header               = '%TimeStamp: 2016 10 25 04 00
+                                  %TimeZone: GMT+0.000
+                                  %Domain: MARA
+                                  %Type: OI
+                                  %DataCreationInfo: Rutgers/MARACOOS Domain
+                                  %DataCreationTimeStamp: 25-Oct-2016 11:20:26
+                                  %DataCreationTimeZone: GMT
+                                  %ProcessingProgram: TUVstruct2ascii_OI 25-Oct-2016 11:21:18
+                                  %TUV_structVersion: SVN $Rev: 396 $ $Date: 2007-04-02 16:56:29 +0000 (Mon, 02 Apr 2007) $
+                                  %MinNumSites:    2
+                                  %MinNumRads:   3
+                                  %mdlvar: 420.00
+                                  %errvar:  66.00
+                                  %sx:  10.00
+                                  %sy:  25.00
+                                  %tempthresh: 0.020833
+                                  %Longitude  Latitude  U comp  V comp    Uerr   Verr   NumRad   Site
+                                  % (deg)      (deg)    (cm/s)  (cm/s)  (norm) (norm)            Code
+                                  '
+           Conventions          = 'CF 1.6'
+           creation_date        = 'Tue Oct 25 11:21:18 2016 EDT'
+           creator_name         = 'Michael Smith'
+           creator_email        = 'michaesm@marine.rutgers.edu'
+           institution          = 'Coastal Ocean Observation Lab, Institute of Marine & Coastal Sciences, Rutgers University'
+           id                   = 'RU_5MHz_2016_10_25_0400'
+           naming_authority     = 'edu.rutgers.marine.rucool'
+           title                = 'MARACOOS 5MHz Sea Surface Currents'
+           summary              = 'Optimally Interpolated Total Vectors calculated by HFRProgs toolbox using MATLAB. Mercator lat/lon projection using 6km grid.'
+           keywords             = 'codar, totals, vectors, currents, optimal, interpolation, 6km'
+           geospatial_lat_min   = 33.5488
+           geospatial_lat_max   = 43.4738
+           geospatial_lat_units = 'degrees_north'
+           geospatial_lon_min   = -76.9768
+           geospatial_lon_max   = -68.0332
+           geospatial_lon_units = 'degrees_east'
+           history              = 'Hourly codar radial data combined into one hourly file containing vectors. See source attribute'
+           source               = 'surface observation'
+Dimensions:
+           lon  = 155
+           lat  = 185
+           time = 1     (UNLIMITED)
+Variables:
+    time       
+           Size:       1x1
+           Dimensions: time
+           Datatype:   double
+           Attributes:
+                       longname = 'Time'
+                       calendar = 'gregorian'
+                       units    = 'days since 2001-01-01 00:00:00'
+    lon        
+           Size:       155x1
+           Dimensions: lon
+           Datatype:   single
+           Attributes:
+                       _FillValue = -999
+                       longname   = 'Longitude'
+                       shortname  = 'lon'
+                       units      = 'degrees_east'
+    lat        
+           Size:       185x1
+           Dimensions: lat
+           Datatype:   single
+           Attributes:
+                       _FillValue = -999
+                       longname   = 'Latitude'
+                       shortname  = 'lat'
+                       units      = 'degrees_north'
+    u          
+           Size:       155x185x1
+           Dimensions: lon,lat,time
+           Datatype:   single
+           Attributes:
+                       _FillValue    = -999
+                       longname      = 'Eastward Velocity'
+                       standard_name = 'surface_eastward_sea_water_velocity'
+                       shortname     = 'u'
+                       units         = 'cm/s'
+    v          
+           Size:       155x185x1
+           Dimensions: lon,lat,time
+           Datatype:   single
+           Attributes:
+                       _FillValue    = -999
+                       longname      = 'Northward Velocity'
+                       standard_name = 'surface_northward_sea_water_velocity'
+                       shortname     = 'v'
+                       units         = 'cm/s'
+    u_err      
+           Size:       155x185x1
+           Dimensions: lon,lat,time
+           Datatype:   single
+           Attributes:
+                       _FillValue = -999
+    v_err      
+           Size:       155x185x1
+           Dimensions: lon,lat,time
+           Datatype:   single
+           Attributes:
+                       _FillValue = -999
+    num_radials
+           Size:       155x185x1
+           Dimensions: lon,lat,time
+           Datatype:   int32
+           Attributes:
+                       _FillValue = -999
+    site_code  
+           Size:       155x185x1
+           Dimensions: lon,lat,time
+           Datatype:   int32
+           Attributes:
+                       _FillValue = -999

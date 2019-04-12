@@ -1,0 +1,180 @@
+http://dods.ndbc.noaa.gov//thredds/dodsC/data/stdmet/44009/44009h9999.nc
+K>> ncdisp(file)
+Source:
+           http://dods.ndbc.noaa.gov//thredds/dodsC/data/stdmet/44009/44009h9999.nc
+Format:
+           64bit
+Global Attributes:
+           institution                     = 'NOAA National Data Buoy Center and Participators in Data Assembly Center'
+           url                             = 'http://dods.ndbc.noaa.gov'
+           quality                         = 'Automated QC checks with daily manual QC'
+           conventions                     = 'COARDS'
+           station                         = '44009'
+           comment                         = 'DELAWARE BAY 26 NM Southeast of Cape May, NJ'
+           location                        = '38.464 N 74.702 W '
+           sea_floor_depth_below_sea_level = '30.5m'
+           anemometer_height               = '5.0m'
+           air_temperature_height          = '4.0m'
+           water_temperature_depth         = '0.6m'
+Dimensions:
+           time      = 26757 (UNLIMITED)
+           latitude  = 1
+           longitude = 1
+Variables:
+    time                   
+           Size:       26757x1
+           Dimensions: time
+           Datatype:   int32
+           Attributes:
+                       long_name     = 'Epoch Time'
+                       short_name    = 'time'
+                       standard_name = 'time'
+                       units         = 'seconds since 1970-01-01 00:00:00 UTC'
+    latitude               
+           Size:       1x1
+           Dimensions: latitude
+           Datatype:   single
+           Attributes:
+                       long_name     = 'Latitude'
+                       short_name    = 'latitude'
+                       standard_name = 'latitude'
+                       units         = 'degrees_north'
+    longitude              
+           Size:       1x1
+           Dimensions: longitude
+           Datatype:   single
+           Attributes:
+                       long_name     = 'Longitude'
+                       short_name    = 'longitude'
+                       standard_name = 'longitude'
+                       units         = 'degrees_east'
+    wind_dir               
+           Size:       1x1x26757
+           Dimensions: longitude,latitude,time
+           Datatype:   int32
+           Attributes:
+                       long_name     = 'Wind Direction'
+                       short_name    = 'wdir'
+                       standard_name = 'wind_from_direction'
+                       units         = 'degrees_true'
+                       _FillValue    = 999
+    wind_spd               
+           Size:       1x1x26757
+           Dimensions: longitude,latitude,time
+           Datatype:   single
+           Attributes:
+                       long_name     = 'Wind Speed'
+                       short_name    = 'wspd'
+                       standard_name = 'wind_speed'
+                       units         = 'meters/second'
+                       _FillValue    = 99
+    gust                   
+           Size:       1x1x26757
+           Dimensions: longitude,latitude,time
+           Datatype:   single
+           Attributes:
+                       long_name     = 'Wind Gust Speed'
+                       short_name    = 'gst'
+                       standard_name = 'gust'
+                       units         = 'meters/second'
+                       _FillValue    = 99
+    wave_height            
+           Size:       1x1x26757
+           Dimensions: longitude,latitude,time
+           Datatype:   single
+           Attributes:
+                       long_name     = 'Significant Wave Height'
+                       short_name    = 'wvht'
+                       standard_name = 'significant_height_of_wave'
+                       units         = 'meters'
+                       _FillValue    = 99
+    dominant_wpd           
+           Size:       1x1x26757
+           Dimensions: longitude,latitude,time
+           Datatype:   single
+           Attributes:
+                       long_name     = 'Dominant Wave Period'
+                       short_name    = 'dpd'
+                       standard_name = 'dominant_wave_period'
+                       units         = 'seconds'
+                       _FillValue    = 99
+    average_wpd            
+           Size:       1x1x26757
+           Dimensions: longitude,latitude,time
+           Datatype:   single
+           Attributes:
+                       long_name     = 'Average Wave Period'
+                       short_name    = 'apd'
+                       standard_name = 'average_wave_period'
+                       units         = 'seconds'
+                       _FillValue    = 99
+    mean_wave_dir          
+           Size:       1x1x26757
+           Dimensions: longitude,latitude,time
+           Datatype:   int32
+           Attributes:
+                       long_name     = 'Mean Wave Direction'
+                       short_name    = 'mwd'
+                       standard_name = 'mean_wave_direction'
+                       units         = 'degrees_true'
+                       _FillValue    = 999
+    air_pressure           
+           Size:       1x1x26757
+           Dimensions: longitude,latitude,time
+           Datatype:   single
+           Attributes:
+                       long_name     = 'Sea Level Pressure'
+                       short_name    = 'pres'
+                       standard_name = 'air_pressure_at_sea_level'
+                       units         = 'hPa'
+                       _FillValue    = 9999
+    air_temperature        
+           Size:       1x1x26757
+           Dimensions: longitude,latitude,time
+           Datatype:   single
+           Attributes:
+                       long_name     = 'Air Temperature'
+                       short_name    = 'atmp'
+                       standard_name = 'air_temperature'
+                       units         = 'degree_Celsius'
+                       _FillValue    = 999
+    sea_surface_temperature
+           Size:       1x1x26757
+           Dimensions: longitude,latitude,time
+           Datatype:   single
+           Attributes:
+                       long_name     = 'Sea Surface Temperature'
+                       short_name    = 'wtmp'
+                       standard_name = 'sea_surface_temperature'
+                       units         = 'degree_Celsius'
+                       _FillValue    = 999
+    dewpt_temperature      
+           Size:       1x1x26757
+           Dimensions: longitude,latitude,time
+           Datatype:   single
+           Attributes:
+                       long_name     = 'Dew Point Temperature'
+                       short_name    = 'dewp'
+                       standard_name = 'dew_point_temperature'
+                       units         = 'degree_Celsius'
+                       _FillValue    = 999
+    visibility             
+           Size:       1x1x26757
+           Dimensions: longitude,latitude,time
+           Datatype:   single
+           Attributes:
+                       long_name     = 'Visibility'
+                       short_name    = 'vis'
+                       standard_name = 'visibility_in_air'
+                       units         = 'US_statute_miles'
+                       _FillValue    = 99
+    water_level            
+           Size:       1x1x26757
+           Dimensions: longitude,latitude,time
+           Datatype:   single
+           Attributes:
+                       long_name     = 'Tide Water Level'
+                       short_name    = 'tide'
+                       standard_name = 'water_level'
+                       units         = 'feet'
+                       _FillValue    = 99

@@ -1,0 +1,425 @@
+>> ncdisp('HRALBPH_2016-09-15.nc')
+Source:
+           /Users/hroarty/COOL/01_CODAR/MARACOOS_II/20170207_NC_Template/HRALBPH_2016-09-15.nc
+Format:
+           netcdf4
+Global Attributes:
+           id                           = 'HRALBPH_2016-09-15'
+           uuid                         = 'a66fd498-298e-41b5-8e84-b21d04a2fd1c'
+           naming_authority             = 'Hudson River Environmental Conditions Observing System (HRECOS)'
+           ncei_template_version        = 'NCEI_NetCDF_TimeSeries_Orthogonal_Template_v2.0'
+           sea_name                     = 'Hudson River'
+           cdm_data_type                = 'Station'
+           featureType                  = 'timeSeries'
+           Conventions                  = 'CF-1.6, ACDD-1.3'
+           Metadata_Conventions         = 'Unidata Dataset Discovery v1.0'
+           standard_name_vocabulary     = 'CF Standard Name Table v35'
+           project                      = 'Hudson River Environmental Conditions Observing System (HRECOS)'
+           program                      = 'Hudson River Environmental Conditions Observing System (HRECOS)'
+           product_version              = '2.0'
+           title                        = 'Hudson River Environmental Conditions Observing System'
+           institution                  = 'Hudson River Environmental Conditions Observing System (HRECOS)'
+           references                   = 'http://www.HRECOS.org http://www.hrecos.org/images/Data/forweb/HRECOS.QAPP.2013.03.14.pdf'
+           platform                     = 'In Situ Ocean-based Platforms > OCEAN PLATFORM/OCEAN STATIONS'
+           instrument_vocabulary        = 'GCMD Earth Science Keywords. Version 5.3.3'
+           platform_vocabulary          = 'GCMD Earth Science Keywords. Version 5.3.3'
+           keywords_vocabulary          = 'GCMD Earth Science Keywords. Version 5.3.3'
+           source                       = 'File generated from python script HRECOS_Scraper_NCEI_v3.py'
+           geospatial_lat_min           = 42.6196
+           geospatial_lat_max           = 42.6196
+           geospatial_lat_units         = 'degrees_north'
+           geospatial_lon_min           = -73.7581
+           geospatial_lon_max           = -73.7581
+           geospatial_lon_units         = 'degrees_east'
+           geospatial_vertical_positive = 'down'
+           geospatial_vertical_units    = 'm'
+           geospatial_bounds            = 'POINT (-73.7581 42.6196)'
+           geospatial_bounds_crs        = 'EPSG:4326'
+           publisher_name               = 'RPS ASA on behalf of HRECOS.'
+           publisher_phone              = '(401) 789-6224'
+           publisher_email              = 'devops@asascience.com'
+           publisher_url                = 'http://www.asascience.com/'
+           publisher_type               = 'institution'
+           publisher_institution        = 'RPS ASA'
+           creator_name                 = 'HRECOS'
+           creator_url                  = 'http://www.hrecos.org/'
+           creator_email                = 'gavin.lemley@dec.ny.gov'
+           creator_type                 = 'institution'
+           creator_institution          = 'HRECOS'
+           processing_level             = 'realtime'
+           acknowledgment               = 'HRECOS is operated by a consortium of partners from government research and non-profit organizations. Thanks to all of our partners!'
+           time_coverage_start          = '2016-09-15T04:00:00Z'
+           time_coverage_end            = '2016-09-15T12:45:00Z'
+           time_coverage_duration       = 'P31500S'
+           time_coverage_resolution     = 'P900S'
+           date_created                 = '2016-09-15T13:38:00Z'
+           date_issued                  = '2016-09-15T13:38:00Z'
+           date_modified                = '2016-09-15T13:38:00Z'
+           date_metadata_modified       = '2016-09-15T13:38:00Z'
+           history                      = 'Created on 2016-09-15 with HRECOS_Scraper_NCEI_v3.py'
+           comment                      = 'Data retrieved using HRECOS database API calls to retrieve a zipped csv file, then coverted to netCDF using python netCDF4 library'
+           contributor_name             = 'Gavin Lemley'
+           summary                      = UNSUPPORTED DATATYPE
+           contributor_role             = 'HRECOS Coordinator'
+           license                      = 'HRECOS requests that attribution be given whenever HRECOS material is reproduced and re- disseminated and the HRECOS Coordinator be notified prior to publications including any part of the data. Example citation: 'Hudson River Environmental Conditions Observing System. 2012. Albany Hydrologic Station data. Accessed April 13th, 2036. http://www.hrecos.org/.''
+           metadata_link                = 'http://www.hrecos.org/images/Data/forweb/HRALBPH.Metadata.pdf'
+           keywords                     = 'Oceans > Ocean Chemistry > Chlorophyll, Oceans > Ocean Chemistry > Oxygen, Oceans > Ocean Chemistry > Oxygen, Oceans > Ocean Chemistry > pH, Oceans > Salinity/Density > Salinity, Oceans > Sea Surface Topography > Sea Surface Height, Oceans > Salinity/Density > Conductivity, Oceans > Ocean Temperature > Water Temperature'
+           instrument                   = 'In Situ/Laboratory Instruments > Chemical Meters/Analyzers > > > OXYGEN METERS, In Situ/Laboratory Instruments > Chemical Meters/Analyzers > > > PH METERS, In Situ/Laboratory Instruments > Pressure/Height Meters > > > PRESSURE TRANSDUCERS, In Situ/Laboratory Instruments > Gauges > > > WATER LEVEL GAUGES, In Situ/Laboratory Instruments > Photon/Optical Detectors > > > TURBIDITY METERS, In Situ/Laboratory Instruments > Conductivity Sensors, In Situ/Laboratory Instruments > Temperature/Humidity Sensors > Thermistors'
+Dimensions:
+           name_strlen = 7
+           time        = 36
+Variables:
+    lat                                           
+           Size:       1x1
+           Dimensions: 
+           Datatype:   single
+           Attributes:
+                       units               = 'degrees_north'
+                       standard_name       = 'latitude'
+                       long_name           = 'station latitude'
+                       axis                = 'Y'
+                       valid_min           = -90
+                       valid_max           = 90
+                       comment             = 'Station Latitude'
+                       _CoordinateAxisType = 'Lat'
+    lon                                           
+           Size:       1x1
+           Dimensions: 
+           Datatype:   single
+           Attributes:
+                       units               = 'degrees_east'
+                       standard_name       = 'longitude'
+                       long_name           = 'station longitude'
+                       axis                = 'X'
+                       valid_min           = -180
+                       valid_max           = 180
+                       comment             = 'Station Longitude'
+                       _CoordinateAxisType = 'Lon'
+    station_id                                    
+           Size:       7x1
+           Dimensions: name_strlen
+           Datatype:   char
+           Attributes:
+                       cf_role    = 'timeseries_id'
+                       short_name = 'HRALBPH'
+                       long_name  = 'Port of Albany NY (Hydrological) '
+    time                                          
+           Size:       36x1
+           Dimensions: time
+           Datatype:   double
+           Attributes:
+                       units               = 'seconds since 1970-01-01T00:00:00Z'
+                       standard_name       = 'time'
+                       long_name           = 'time of measurement'
+                       calendar            = 'gregorian'
+                       comment             = 'Sample time'
+                       _CoordinateAxisType = 'Time'
+    crs                                           
+           Size:       1x1
+           Dimensions: 
+           Datatype:   int32
+           Attributes:
+                       long_name          = 'http://www.opengis.net/def/crs/EPSG/0/4326'
+                       grid_mapping_name  = 'latitude_longitude'
+                       epsg_code          = 'EPSG:4326'
+                       semi_major_axis    = 6378137
+                       inverse_flattening = 298.2572
+    HRALBPH                                       
+           Size:       1x1
+           Dimensions: 
+           Datatype:   char
+           Attributes:
+                       ioos_code   = 'urn:ioos:station:hrecos:HRALBPH'
+                       short_name  = 'urn:ioos:station:hrecos:HRALBPH'
+                       long_name   = 'Port of Albany NY (Hydrological) '
+                       comment     = 'This variable describes the platform that was used in the collection of the data'
+                       description = 'Port of Albany hydro (DEC)'
+    z                                             
+           Size:       1x1
+           Dimensions: 
+           Datatype:   double
+           Attributes:
+                       standard_name = 'depth'
+                       long_name     = 'average depth of sensor'
+                       comment       = 'Derived from mean value of depth variable'
+                       axis          = 'Z'
+                       positive      = 'down'
+                       valid_min     = 0
+                       valid_max     = 9
+                       units         = 'm'
+    OTT_Bubbler_Sensor                            
+           Size:       1x1
+           Dimensions: 
+           Datatype:   char
+           Attributes:
+                       serial_number = 'unknown'
+                       sensor_type   = 'Nitrogen bubbler'
+                       make_model    = 'OTT_Bubbler_Sensor'
+                       long_name     = 'OTT_Bubbler_Sensor'
+    YSI_6150_ROX                                  
+           Size:       1x1
+           Dimensions: 
+           Datatype:   char
+           Attributes:
+                       serial_number = 'unknown'
+                       sensor_type   = 'Optical'
+                       make_model    = 'YSI 6150 ROX'
+                       long_name     = 'YSI 6150 ROX'
+    YSI_6025                                      
+           Size:       1x1
+           Dimensions: 
+           Datatype:   char
+           Attributes:
+                       serial_number = 'unknown'
+                       sensor_type   = 'Optical'
+                       make_model    = 'YSI 6025'
+                       long_name     = 'YSI 6025'
+    YSI_6589                                      
+           Size:       1x1
+           Dimensions: 
+           Datatype:   char
+           Attributes:
+                       serial_number = 'unknown'
+                       sensor_type   = 'Glass combination electrode'
+                       make_model    = 'YSI 6589 Fast-response pH Sensor'
+                       long_name     = 'YSI 6589 Fast-response pH Sensor'
+    YSI_6560                                      
+           Size:       1x1
+           Dimensions: 
+           Datatype:   char
+           Attributes:
+                       serial_number = 'unknown'
+                       sensor_type   = 'Nickel electrode, thermistor'
+                       make_model    = 'YSI 6560'
+                       long_name     = 'YSI 6560'
+    YSI_6136                                      
+           Size:       1x1
+           Dimensions: 
+           Datatype:   char
+           Attributes:
+                       serial_number = 'unknown'
+                       sensor_type   = 'Optical'
+                       make_model    = 'YSI 6136'
+                       long_name     = 'YSI 6136'
+    mass_concentration_of_chlorophyll_in_sea_water
+           Size:       36x1
+           Dimensions: time
+           Datatype:   single
+           Attributes:
+                       _FillValue            = -999.9
+                       coordinates           = 'time lat lon'
+                       long_name             = 'mass_concentration_of_chlorophyll_in_sea_water'
+                       description           = 'Chlorophyll'
+                       grid_mapping          = 'crs'
+                       cell_methods          = 'time: point lat: point lon: point'
+                       references            = 'http://www.hrecos.org/images/Data/forweb/HRECOS.QAPP.2013.03.14.pdf'
+                       platform              = 'HRALBPH'
+                       coverage_content_type = 'physicalMeasurement'
+                       missing_value         = -999.9
+                       comment               = 'Collected every 15 min with 0.1% Full Scale resolution. *Chlorophyll measurements ended 12/12/2011 when it was decided that data from this sensor were not informative.'
+                       instrument            = 'YSI_6025'
+                       valid_min             = 0
+                       source                = 'Optical fluorescence sensor'
+                       standard_name         = 'mass_concentration_of_chlorophyll_in_sea_water'
+                       units                 = 'ug/L'
+                       valid_max             = 0.0001
+    mass_concentration_of_oxygen_in_sea_water     
+           Size:       36x1
+           Dimensions: time
+           Datatype:   single
+           Attributes:
+                       _FillValue            = -999.9
+                       coordinates           = 'time lat lon'
+                       long_name             = 'mass_concentration_of_oxygen_in_sea_water'
+                       description           = 'Dissolved Oxygen'
+                       grid_mapping          = 'crs'
+                       cell_methods          = 'time: point lat: point lon: point'
+                       references            = 'http://www.hrecos.org/images/Data/forweb/HRECOS.QAPP.2013.03.14.pdf'
+                       platform              = 'HRALBPH'
+                       coverage_content_type = 'physicalMeasurement'
+                       missing_value         = -999.9
+                       comment               = 'Calculated every 15 min with 0.01 mg/L resolution'
+                       instrument            = 'YSI_6150_ROX'
+                       valid_min             = 0
+                       source                = 'Calculated from air saturation, temperature, and salinity'
+                       standard_name         = 'mass_concentration_of_oxygen_in_sea_water'
+                       units                 = 'kg m-3'
+                       valid_max             = 0.05
+    fractional_saturation_of_oxygen_in_sea_water  
+           Size:       36x1
+           Dimensions: time
+           Datatype:   single
+           Attributes:
+                       _FillValue            = -999.9
+                       coordinates           = 'time lat lon'
+                       long_name             = 'fractional_saturation_of_oxygen_in_sea_water'
+                       description           = 'Dissolved Oxygen Percent'
+                       grid_mapping          = 'crs'
+                       cell_methods          = 'time: point lat: point lon: point'
+                       references            = 'http://www.hrecos.org/images/Data/forweb/HRECOS.QAPP.2013.03.14.pdf'
+                       platform              = 'HRALBPH'
+                       coverage_content_type = 'physicalMeasurement'
+                       missing_value         = -999.9
+                       comment               = 'Collected every 15 min with 0.1% air saturation resolution'
+                       instrument            = 'YSI_6150_ROX'
+                       valid_min             = 0
+                       source                = 'Optical probe with mechanical cleaning'
+                       standard_name         = 'fractional_saturation_of_oxygen_in_sea_water'
+                       units                 = 'pct'
+                       valid_max             = 500
+    sea_water_ph_reported_on_total_scale          
+           Size:       36x1
+           Dimensions: time
+           Datatype:   single
+           Attributes:
+                       _FillValue            = -999.9
+                       coordinates           = 'time lat lon'
+                       long_name             = 'sea_water_ph_reported_on_total_scale'
+                       description           = 'Acidity'
+                       grid_mapping          = 'crs'
+                       cell_methods          = 'time: point lat: point lon: point'
+                       references            = 'http://www.hrecos.org/images/Data/forweb/HRECOS.QAPP.2013.03.14.pdf'
+                       platform              = 'HRALBPH'
+                       coverage_content_type = 'physicalMeasurement'
+                       missing_value         = -999.9
+                       comment               = 'Collected every 15 min with +/- 0.2 units of resolution'
+                       instrument            = 'YSI_6589'
+                       valid_min             = 0
+                       source                = 'Glass combination electrode'
+                       standard_name         = 'sea_water_ph_reported_on_total_scale'
+                       units                 = 'pH'
+                       valid_max             = 14
+    sea_water_salinity                            
+           Size:       36x1
+           Dimensions: time
+           Datatype:   single
+           Attributes:
+                       _FillValue            = -999.9
+                       coordinates           = 'time lat lon'
+                       long_name             = 'sea_water_salinity'
+                       description           = 'Salinity'
+                       grid_mapping          = 'crs'
+                       cell_methods          = 'time: point lat: point lon: point'
+                       references            = 'http://www.hrecos.org/images/Data/forweb/HRECOS.QAPP.2013.03.14.pdf'
+                       platform              = 'HRALBPH'
+                       coverage_content_type = 'physicalMeasurement'
+                       missing_value         = -999.9
+                       comment               = 'Calculated every 15 minutes with 0.01 ppt resolution'
+                       instrument            = 'YSI_6560'
+                       valid_min             = 0
+                       source                = 'Calculated from conductivity and temperature'
+                       standard_name         = 'sea_water_salinity'
+                       units                 = 'psu'
+                       valid_max             = 70
+    depth                                         
+           Size:       36x1
+           Dimensions: time
+           Datatype:   single
+           Attributes:
+                       _FillValue            = -999.9
+                       coordinates           = 'time lat lon'
+                       long_name             = 'depth'
+                       description           = 'Depth'
+                       grid_mapping          = 'crs'
+                       cell_methods          = 'time: point lat: point lon: point'
+                       references            = 'http://www.hrecos.org/images/Data/forweb/HRECOS.QAPP.2013.03.14.pdf'
+                       platform              = 'HRALBPH'
+                       coverage_content_type = 'physicalMeasurement'
+                       missing_value         = -999.9
+                       comment               = 'Datum: NAVD88. Collected every 15 min. Vented to atmosphere.'
+                       instrument            = 'OTT_Bubbler_Sensor'
+                       positive              = 'down'
+                       valid_min             = -5
+                       source                = ''
+                       standard_name         = 'depth'
+                       units                 = 'm'
+                       valid_max             = 9
+    water_surface_height_above_reference_datum    
+           Size:       36x1
+           Dimensions: time
+           Datatype:   single
+           Attributes:
+                       _FillValue            = -999.9
+                       coordinates           = 'time lat lon'
+                       long_name             = 'water_surface_height_above_reference_datum'
+                       description           = 'Water Elevation'
+                       grid_mapping          = 'crs'
+                       cell_methods          = 'time: point lat: point lon: point'
+                       references            = 'http://www.hrecos.org/images/Data/forweb/HRECOS.QAPP.2013.03.14.pdf'
+                       platform              = 'HRALBPH'
+                       coverage_content_type = 'physicalMeasurement'
+                       missing_value         = -999.9
+                       comment               = 'Datum: NAVD88. Collected every 15 min. Vented to atmosphere.'
+                       instrument            = 'OTT_Bubbler_Sensor'
+                       valid_min             = -5
+                       source                = 'Nitrogen bubbler'
+                       standard_name         = 'water_surface_height_above_reference_datum'
+                       units                 = 'm'
+                       valid_max             = 70
+    sea_water_turbidity                           
+           Size:       36x1
+           Dimensions: time
+           Datatype:   single
+           Attributes:
+                       _FillValue            = -999.9
+                       coordinates           = 'time lat lon'
+                       long_name             = 'sea_water_turbidity'
+                       description           = 'Turbidity'
+                       grid_mapping          = 'crs'
+                       cell_methods          = 'time: point lat: point lon: point'
+                       references            = 'http://www.hrecos.org/images/Data/forweb/HRECOS.QAPP.2013.03.14.pdf'
+                       platform              = 'HRALBPH'
+                       coverage_content_type = 'physicalMeasurement'
+                       missing_value         = -999.9
+                       comment               = 'Collected every 15 min with 0.1 NTU resolution'
+                       instrument            = 'YSI_6136'
+                       valid_min             = 0
+                       source                = UNSUPPORTED DATATYPE
+                       standard_name         = 'sea_water_turbidity'
+                       units                 = 'NTU'
+                       valid_max             = 1000
+    sea_water_electrical_conductivity             
+           Size:       36x1
+           Dimensions: time
+           Datatype:   single
+           Attributes:
+                       _FillValue            = -999.9
+                       coordinates           = 'time lat lon'
+                       long_name             = 'sea_water_electrical_conductivity'
+                       description           = 'Specific Conductivity'
+                       grid_mapping          = 'crs'
+                       cell_methods          = 'time: point lat: point lon: point'
+                       references            = 'http://www.hrecos.org/images/Data/forweb/HRECOS.QAPP.2013.03.14.pdf'
+                       platform              = 'HRALBPH'
+                       coverage_content_type = 'physicalMeasurement'
+                       missing_value         = -999.9
+                       comment               = 'Collected every 15 min with 0.001 mS/cm to 0.1 mS/cm (range dependent) resolution'
+                       instrument            = 'YSI_6560'
+                       valid_min             = 0
+                       source                = 'Nickel electrode'
+                       standard_name         = 'sea_water_electrical_conductivity'
+                       units                 = 'S m-1'
+                       valid_max             = 10
+    sea_water_temperature                         
+           Size:       36x1
+           Dimensions: time
+           Datatype:   single
+           Attributes:
+                       _FillValue            = -999.9
+                       coordinates           = 'time lat lon'
+                       long_name             = 'sea_water_temperature'
+                       description           = 'Water Temp'
+                       grid_mapping          = 'crs'
+                       cell_methods          = 'time: point lat: point lon: point'
+                       references            = 'http://www.hrecos.org/images/Data/forweb/HRECOS.QAPP.2013.03.14.pdf'
+                       platform              = 'HRALBPH'
+                       coverage_content_type = 'physicalMeasurement'
+                       missing_value         = -999.9
+                       comment               = 'Collected every 15 min from Thermistor with 0.01 deg_C resolution'
+                       instrument            = 'YSI_6560'
+                       valid_min             = -5
+                       source                = 'Thermistor'
+                       standard_name         = 'sea_water_temperature'
+                       units                 = 'degrees_C'
+                       valid_max             = 45
+>> 

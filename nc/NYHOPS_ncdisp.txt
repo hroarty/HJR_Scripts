@@ -1,0 +1,346 @@
+K>> ncdisp(url)
+Source:
+           http://colossus.dl.stevens-tech.edu:8080/thredds/dodsC/fmrc/NYBight/
+           NYHOPS_Forecast_Collection_for_the_New_York_Bight_best.ncd
+Format:
+           64bit
+Global Attributes:
+           Conventions              = 'CF-1.0, _Coordinates'
+           Conventions_comment      = 'The version is CF-1.4'
+           grid_type                = 'Curvilinear'
+           z_type                   = 'Sigma'
+           model                    = 'New York Harbor Observing and Prediction System (NYHOPS)                        '
+           title                    = 'NYHOPS Forecast Model Results '
+           comment                  = 'Once-daily 24hr Hindcast and 48hr Forecast'
+           source                   = 'S::POM_vs4'
+           institution              = 'Stevens Institute of Technology'
+           history                  = 'ECOMSED/Princeton Ocean Model; Synthetic dataset 
+           from TDS fmrc (best) aggregation, original data from fmrc/NYBight'
+           references               = 'Alan.Blumberg@stevens.edu, Nickitas.Georgas@stevens.edu'
+           related_url              = 'http://www.stevens.edu/maritimeforecast'
+           creation_date            = ' 8-Dec-10'
+           base_date                = [2.01e+03 6.00e+00 1.40e+01 4.00e+00]
+           type_of_run              = 'PROGNOSTIC'
+           hormix_type              = 'CLOSURE   '
+           hormix_value             = 0.01
+           vrtmix_type              = 'CLOSURE   '
+           vrtmix_value             = 1e-06
+           refl_coeff               = 0.1
+           file_type                = 'This file contains truncated NYHOPS Version III 
+                                     results for the New York Bight subregion.'
+           cdm_data_type            = 'GRID'
+           _CoordinateModelBaseDate = '2010-01-01T00:00:00Z'
+Dimensions:
+           maxStrlen64 = 64
+           sigma       = 11
+           time        = 212826
+           vertices    = 4
+           xpos        = 124
+           ypos        = 22
+           zpos        = 11
+Variables:
+    time_offset
+           Size:       212826x1
+           Dimensions: time
+           Datatype:   double
+           Attributes:
+                       long_name     = 'hour offset from start of run for coordinate = time'
+                       units         = 'hour'
+                       standard_name = 'forecast_period'
+    layer_bnds 
+           Size:       11x1
+           Dimensions: zpos
+           Datatype:   single
+           Attributes:
+                       long_name = 'bounds of stretched vertical coordinate levels'
+                       units     = '1'
+                       positive  = 'up'
+    lon_bnds   
+           Size:       124x22x4
+           Dimensions: xpos,ypos,vertices
+           Datatype:   single
+           Attributes:
+                       long_name   = 'Vertex longitude'
+                       units       = 'degrees_east'
+                       valid_range = [-3.61e+02  3.61e+02]
+    lat_bnds   
+           Size:       124x22x4
+           Dimensions: xpos,ypos,vertices
+           Datatype:   single
+           Attributes:
+                       long_name   = 'Vertex latitude'
+                       units       = 'degrees_north'
+                       valid_range = [-3.61e+02  3.61e+02]
+    time       
+           Size:       212826x1
+           Dimensions: time
+           Datatype:   double
+           Attributes:
+                       units               = 'hours since 2010-01-01T00:00:00Z'
+                       long_name           = 'forecast time coordinate'
+                       standard_name       = 'time'
+                       _CoordinateAxisType = 'Time'
+    time_run   
+           Size:       64x212826
+           Dimensions: maxStrlen64,time
+           Datatype:   char
+           Attributes:
+                       long_name           = 'model run dates for coordinate = time'
+                       standard_name       = 'forecast_reference_time'
+                       _CoordinateAxisType = 'RunTime'
+    xpos       
+           Size:       124x1
+           Dimensions: xpos
+           Datatype:   single
+           Attributes:
+                       long_name           = 'X-coordinate in Cartesian system'
+                       units               = 'm'
+                       axis                = 'X'
+                       _CoordinateAxisType = 'GeoX'
+    ypos       
+           Size:       22x1
+           Dimensions: ypos
+           Datatype:   single
+           Attributes:
+                       long_name           = 'Y-coordinate in Cartesian system'
+                       units               = 'm'
+                       axis                = 'Y'
+                       _CoordinateAxisType = 'GeoY'
+    sigma      
+           Size:       11x1
+           Dimensions: sigma
+           Datatype:   single
+           Attributes:
+                       long_name                = 'stretched vertical coordinate levels'
+                       units                    = '1'
+                       positive                 = 'up'
+                       standard_name            = 'ocean_sigma_coordinate'
+                       formula_terms            = 'sigma: sigma eta: elev depth: depth'
+                       axis                     = 'Z'
+                       _CoordinateTransformType = 'Vertical'
+                       _CoordinateAxes          = 'sigma'
+                       _CoordinateAxisType      = 'GeoZ'
+                       _CoordinateZisPositive   = 'up'
+    elev       
+           Size:       124x22x212826
+           Dimensions: xpos,ypos,time
+           Datatype:   single
+           Attributes:
+                       long_name     = 'Elevation'
+                       units         = 'meters'
+                       standard_name = 'sea_surface_height_above_sea_level'
+                       positive      = 'up'
+                       coordinates   = 'lon lat time '
+    wu         
+           Size:       124x22x212826
+           Dimensions: xpos,ypos,time
+           Datatype:   single
+           Attributes:
+                       long_name     = 'EW Wind Comp'
+                       units         = 'm s-1'
+                       standard_name = 'eastward_wind'
+                       coordinates   = 'lon lat time '
+    wv         
+           Size:       124x22x212826
+           Dimensions: xpos,ypos,time
+           Datatype:   single
+           Attributes:
+                       long_name     = 'NS Wind Comp'
+                       units         = 'm s-1'
+                       standard_name = 'northward_wind'
+                       coordinates   = 'lon lat time '
+    patm       
+           Size:       124x22x212826
+           Dimensions: xpos,ypos,time
+           Datatype:   single
+           Attributes:
+                       long_name     = 'Atmospheric pressure'
+                       units         = 'mbar'
+                       standard_name = 'air_pressure_at_sea_level'
+                       coordinates   = 'lon lat time '
+    airt       
+           Size:       124x22x212826
+           Dimensions: xpos,ypos,time
+           Datatype:   single
+           Attributes:
+                       long_name     = '2m-above-surface Air Temperature'
+                       units         = 'Celsius'
+                       standard_name = 'surface_temperature'
+                       coordinates   = 'lon lat time '
+    cld        
+           Size:       124x22x212826
+           Dimensions: xpos,ypos,time
+           Datatype:   single
+           Attributes:
+                       long_name     = 'Cloud Cover fraction'
+                       units         = '1'
+                       standard_name = 'cloud_area_fraction'
+                       coordinates   = 'lon lat time '
+    rhum       
+           Size:       124x22x212826
+           Dimensions: xpos,ypos,time
+           Datatype:   single
+           Attributes:
+                       long_name   = '2m-above-surface Relative Humidity'
+                       units       = 'percent'
+                       coordinates = 'lon lat time '
+    swobs      
+           Size:       124x22x212826
+           Dimensions: xpos,ypos,time
+           Datatype:   single
+           Attributes:
+                       long_name     = 'Shortwave Radiation in W/m2'
+                       units         = 'W m-2'
+                       standard_name = 'surface_downwelling_shortwave_flux_in_air'
+                       coordinates   = 'lon lat time '
+    wh         
+           Size:       124x22x212826
+           Dimensions: xpos,ypos,time
+           Datatype:   single
+           Attributes:
+                       long_name     = 'wave heights'
+                       units         = 'meters'
+                       standard_name = 'sea_surface_wind_wave_significant_height'
+                       coordinates   = 'lon lat time '
+    wp         
+           Size:       124x22x212826
+           Dimensions: xpos,ypos,time
+           Datatype:   single
+           Attributes:
+                       long_name     = 'wave periods'
+                       units         = 'sec'
+                       standard_name = 'sea_surface_wind_wave_period'
+                       coordinates   = 'lon lat time '
+    wd         
+           Size:       124x22x212826
+           Dimensions: xpos,ypos,time
+           Datatype:   single
+           Attributes:
+                       long_name     = 'Significant Wave Direction in Meteorologic Convention'
+                       units         = 'degrees_north'
+                       standard_name = 'sea_surface_wave_from_direction'
+                       coordinates   = 'lon lat time '
+    u          
+           Size:       124x22x11x212826
+           Dimensions: xpos,ypos,sigma,time
+           Datatype:   single
+           Attributes:
+                       long_name     = 'U1 Velocity'
+                       units         = 'm s-1'
+                       standard_name = 'sea_water_x_velocity'
+                       coordinates   = 'lon lat sigma time '
+    v          
+           Size:       124x22x11x212826
+           Dimensions: xpos,ypos,sigma,time
+           Datatype:   single
+           Attributes:
+                       long_name     = 'V1 Velocity'
+                       units         = 'm s-1'
+                       standard_name = 'sea_water_y_velocity'
+                       coordinates   = 'lon lat sigma time '
+    salt       
+           Size:       124x22x11x212826
+           Dimensions: xpos,ypos,sigma,time
+           Datatype:   single
+           Attributes:
+                       long_name     = 'Salinity in psu'
+                       standard_name = 'sea_water_salinity'
+                       units         = '1e-3'
+                       coordinates   = 'lon lat sigma time '
+    temp       
+           Size:       124x22x11x212826
+           Dimensions: xpos,ypos,sigma,time
+           Datatype:   single
+           Attributes:
+                       long_name     = 'Water Temperature'
+                       units         = 'Celsius'
+                       standard_name = 'sea_water_temperature'
+                       coordinates   = 'lon lat sigma time '
+    x          
+           Size:       124x22
+           Dimensions: xpos,ypos
+           Datatype:   single
+           Attributes:
+                       long_name   = 'Corner longitude'
+                       units       = 'degrees_east'
+                       valid_range = [-3.61e+02  3.61e+02]
+    y          
+           Size:       124x22
+           Dimensions: xpos,ypos
+           Datatype:   single
+           Attributes:
+                       long_name   = 'Corner latitude'
+                       units       = 'degrees_north'
+                       valid_range = [-3.61e+02  3.61e+02]
+    h1         
+           Size:       124x22
+           Dimensions: xpos,ypos
+           Datatype:   single
+           Attributes:
+                       long_name = 'dx metric'
+                       units     = 'meters'
+    h2         
+           Size:       124x22
+           Dimensions: xpos,ypos
+           Datatype:   single
+           Attributes:
+                       long_name = 'dy metric'
+                       units     = 'meters'
+    depth      
+           Size:       124x22
+           Dimensions: xpos,ypos
+           Datatype:   single
+           Attributes:
+                       long_name     = 'Bathymetry'
+                       units         = 'meters'
+                       standard_name = 'depth'
+                       positive      = 'down'
+                       valid_range   = [-3.00e+00  2.10e+02]
+    ang        
+           Size:       124x22
+           Dimensions: xpos,ypos
+           Datatype:   single
+           Attributes:
+                       long_name     = 'grid angle'
+                       units         = 'radians'
+                       standard_name = 'angle_of_rotation_from_east_to_x'
+    FSM        
+           Size:       124x22
+           Dimensions: xpos,ypos
+           Datatype:   single
+           Attributes:
+                       long_name = 'free surface mask'
+    DUM        
+           Size:       124x22
+           Dimensions: xpos,ypos
+           Datatype:   single
+           Attributes:
+                       long_name = 'U1-direction mask'
+    DVM        
+           Size:       124x22
+           Dimensions: xpos,ypos
+           Datatype:   single
+           Attributes:
+                       long_name = 'V1-direction mask'
+    lon        
+           Size:       124x22
+           Dimensions: xpos,ypos
+           Datatype:   single
+           Attributes:
+                       long_name           = 'center long'
+                       units               = 'degrees_east'
+                       standard_name       = 'longitude'
+                       bounds              = 'lon_bnds'
+                       valid_range         = [-3.61e+02  3.61e+02]
+                       _CoordinateAxisType = 'Lon'
+    lat        
+           Size:       124x22
+           Dimensions: xpos,ypos
+           Datatype:   single
+           Attributes:
+                       long_name           = 'center lat'
+                       units               = 'degrees_north'
+                       standard_name       = 'latitude'
+                       bounds              = 'lat_bnds'
+                       valid_range         = [-3.61e+02  3.61e+02]
+                       _CoordinateAxisType = 'Lat'

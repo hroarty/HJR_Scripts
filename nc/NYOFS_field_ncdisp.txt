@@ -1,0 +1,129 @@
+Source:
+           /Users/hroarty/data/NYOFS/nos.nyofs.fields.nowcast.20171211.t15z.nc
+Format:
+           classic
+Global Attributes:
+           file_type     = 'Full_Grid'
+           Conventions   = 'COARDS'
+           grid_type     = 'curvilinear'
+           z_type        = 'sigma'
+           model         = 'POM'
+           title         = 'Forecast: Coarse Grid, Field'
+           comment       = 'Unix'
+           source        = 'CSDL/MMAP'
+           institution   = 'SGI O300'
+           history       = 'Operation-COOPS'
+           references    = 'eugene.wei@noaa.gov'
+           creation_date = '2017-12-11 15:35:14  00:00'
+Dimensions:
+           nx    = 73
+           ny    = 134
+           sigma = 7
+           time  = 1     (UNLIMITED)
+Variables:
+    time 
+           Size:       1x1
+           Dimensions: time
+           Datatype:   single
+           Attributes:
+                       long_name     = 'Time'
+                       base_date     = [2008     1     1     0]
+                       units         = 'days since 2008-01-01  0:00:00 00:00'
+                       standard_name = 'time'
+    lon  
+           Size:       73x134
+           Dimensions: nx,ny
+           Datatype:   single
+           Attributes:
+                       long_name     = 'Longitude'
+                       units         = 'degrees_east'
+                       standard_name = 'longitude'
+    lat  
+           Size:       73x134
+           Dimensions: nx,ny
+           Datatype:   single
+           Attributes:
+                       long_name     = 'Latitude'
+                       units         = 'degrees_north'
+                       standard_name = 'latitude'
+    mask 
+           Size:       73x134
+           Dimensions: nx,ny
+           Datatype:   single
+           Attributes:
+                       long_name = 'Land Mask'
+                       units     = 'nondimensional'
+    depth
+           Size:       73x134
+           Dimensions: nx,ny
+           Datatype:   single
+           Attributes:
+                       long_name     = 'Bathymetry '
+                       units         = 'meters'
+                       positive      = 'down'
+                       standard_name = 'depth'
+    sigma
+           Size:       7x1
+           Dimensions: sigma
+           Datatype:   single
+           Attributes:
+                       long_name     = 'Sigma Stretched Vertical Coordinate at Nodes'
+                       units         = 'sigma_level'
+                       positive      = 'down'
+                       standard_name = 'ocean_sigma_coordinate'
+                       formula_terms = 'sigma: sigma eta: zeta depth: depth'
+    zeta 
+           Size:       73x134x1
+           Dimensions: nx,ny,time
+           Datatype:   single
+           Attributes:
+                       long_name     = 'Water Surface Elevation'
+                       units         = 'meters'
+                       missing_value = -99999
+                       positive      = 'up'
+                       standard_name = 'sea_surface_elevation'
+    air_u
+           Size:       73x134x1
+           Dimensions: nx,ny,time
+           Datatype:   single
+           Attributes:
+                       long_name     = 'Eastward Air Velocity'
+                       units         = 'm/s'
+                       missing_value = -99999
+                       standard_name = 'eastward_wind'
+    air_v
+           Size:       73x134x1
+           Dimensions: nx,ny,time
+           Datatype:   single
+           Attributes:
+                       long_name     = 'Northward Air Velocity'
+                       units         = 'm/s'
+                       missing_value = -99999
+                       standard_name = 'northward_wind'
+    u    
+           Size:       73x134x7x1
+           Dimensions: nx,ny,sigma,time
+           Datatype:   single
+           Attributes:
+                       long_name     = 'Eastward Water Velocity'
+                       units         = 'm/s'
+                       missing_value = -99999
+                       standard_name = 'eastward_sea_water_velocity'
+    v    
+           Size:       73x134x7x1
+           Dimensions: nx,ny,sigma,time
+           Datatype:   single
+           Attributes:
+                       long_name     = 'Northward Water Velocity'
+                       units         = 'm/s'
+                       missing_value = -99999
+                       standard_name = 'northward_sea_water_velocity'
+    w    
+           Size:       73x134x7x1
+           Dimensions: nx,ny,sigma,time
+           Datatype:   single
+           Attributes:
+                       long_name     = 'Vertical Water Velocity'
+                       units         = 'm/s'
+                       missing_value = -99999
+                       standard_name = 'upward_sea_water_velocity'

@@ -9,8 +9,8 @@ tic
 %% specific period
 % start_time = datenum(2015,12,1,00,0,2);
 % end_time=datenum(2016,5,31,0,0,2);
-start_time = datenum(2008,12,1,00,0,2);
-end_time=datenum(2009,6,1,0,0,2);
+start_time = datenum(2008,6,1,00,0,2);
+end_time=datenum(2008,12,1,0,0,2);
 
 dtime = start_time:1/24:end_time;
 
@@ -112,10 +112,10 @@ coverage2=squeeze(coverage2);
 
 %% load hugh's file  this contains the lat and lon of the nc files, the associated 
 %% depth and distance to shore of each grid point
-hugh_file=load ('/Users/hroarty/data/grid_files/MARACOOS_Coverage_Grid.mat');
+hugh_file=load ('/Users/roarty/Documents/GitHub/HJR_scripts/data/grid_files/MARACOOS_Coverage_Grid.mat');
 
 %% load the land mask
-eastCoast=load('/Users/hroarty/data/mask_files/MARACOOS_6kmMask.txt');
+eastCoast=load('/Users/roarty/Documents/GitHub/HJR_scripts/data/mask_files/MARACOOS_6kmMask.txt');
 
 %% cat the coverage grid with the coverage data
 data3=[hugh_file.table data2];
@@ -173,7 +173,7 @@ legend('Optimal Interpolation','Location','SouthWest')
 %timestamp(1,'/Users/hroarty/Documents/MATLAB/HJR_Scripts/total_plots/grid_coverage_plot.m')
 
 %% create the output directory and filename
-output_directory = '/Users/hroarty/COOL/01_CODAR/Visualization/Coverage_Plot/';
+output_directory = '/Users/roarty/COOL/01_CODAR/Visualization/Coverage_Plot/';
 % output_filename = ['MARACOOS_Coverage_Uncertainty_Filter_' num2str(threshold) '_' datestr(start_time,'yyyymmdd') '_' datestr(end_time,'yyyymmdd') '.png'];
 output_filename = ['MARACOOS_Coverage_' num2str(threshold) '_' datestr(start_time,'yyyymmdd') '_' datestr(end_time,'yyyymmdd') '.png'];
 
